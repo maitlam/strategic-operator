@@ -1,0 +1,11 @@
+{
+  "name": "intelligence",
+  "displayName": "Intelligence",
+  "version": "0.1.0",
+  "description": "Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief.",
+  "author": {
+    "name": "Mai Lam"
+  },
+  "homepage": "https://github.com/maitlam/strategic-operator",
+  "repository": "https://github.com/maitlam/strategic-operator"
+}

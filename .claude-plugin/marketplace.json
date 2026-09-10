@@ -2,7 +2,7 @@
   "name": "strategic-operator",
   "owner": {
     "name": "Mai Lam",
-    "url": "https://github.com/maiiioi"
+    "url": "https://github.com/maitlam"
   },
   "description": "Open-source Claude skills for Biz Ops, Strategy, and Program Management.",
   "plugins": [
@@ -23,6 +23,24 @@
       "displayName": "Programs",
       "source": "./plugins/programs",
       "description": "Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on."
+    },
+    {
+      "name": "operating-model",
+      "displayName": "Operating Model",
+      "source": "./plugins/operating-model",
+      "description": "Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit."
+    },
+    {
+      "name": "portfolio",
+      "displayName": "Portfolio",
+      "source": "./plugins/portfolio",
+      "description": "Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity."
+    },
+    {
+      "name": "intelligence",
+      "displayName": "Intelligence",
+      "source": "./plugins/intelligence",
+      "description": "Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief."
     }
   ]
 }

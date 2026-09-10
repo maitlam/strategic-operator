@@ -1,0 +1,11 @@
+{
+  "name": "operating-model",
+  "displayName": "Operating Model",
+  "version": "0.1.0",
+  "description": "Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit.",
+  "author": {
+    "name": "Mai Lam"
+  },
+  "homepage": "https://github.com/maitlam/strategic-operator",
+  "repository": "https://github.com/maitlam/strategic-operator"
+}

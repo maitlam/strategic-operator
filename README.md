@@ -2,7 +2,7 @@
 
 Open-source Claude skills for Biz Ops, Strategy, and Program Management.
 
-[![Validate](https://github.com/maiiioi/strategic-operator/actions/workflows/validate.yml/badge.svg)](https://github.com/maiiioi/strategic-operator/actions/workflows/validate.yml)
+[![Validate](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml/badge.svg)](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml)
 
 ## Why I built this
 
@@ -22,13 +22,27 @@ Three plugins, one for each area I work in. Every skill is labeled so you can se
 | [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 18 | 0 | 0 | 18 |
 | [Strategy](plugins/strategy/README.md) | Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction. | 30 | 0 | 0 | 30 |
 | [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 38 | 0 | 0 | 38 |
-| **Total** | | **86** | **0** | **0** | **86** |
+| [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 4 | 4 | 0 | 0 |
+| [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 4 | 4 | 0 | 0 |
+| [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief. | 4 | 4 | 0 | 0 |
+| **Total** | | **98** | **12** | **0** | **86** |
 
-Counts include 85 skills, 1 command, and 0 agents.
+Counts include 97 skills, 1 command, and 0 agents.
 
 ### My original and adapted work
 
-_Nothing here yet. My own skills and agents will show up here as I build them._
+- [`competitive-intel`](plugins/intelligence/skills/competitive-intel/SKILL.md) · Original · intelligence: Build a read on a competitor — what they're actually doing versus what they say, where they're strong, where they're exposed, and what their recent moves imply about…
+- [`ecosystem-map`](plugins/intelligence/skills/ecosystem-map/SKILL.md) · Original · intelligence: Segment an unfamiliar market or ecosystem into its structural parts — who the actors are, how value and money move between them, and where the pain concentrates
+- [`intelligence-brief`](plugins/intelligence/skills/intelligence-brief/SKILL.md) · Original · intelligence: Produce a recurring market intelligence brief — daily or weekly signals filtered for what actually matters to this team, with the "so what" attached
+- [`partner-scan`](plugins/intelligence/skills/partner-scan/SKILL.md) · Original · intelligence: Profile a specific company as a potential partner — what they do, who they serve, how they make money, what they'd want from a partnership, and what would have to be…
+- [`decision-rights`](plugins/operating-model/skills/decision-rights/SKILL.md) · Original · operating-model: Map who decides what on a team or program — the authority to approve, to break a tie, to spend, and to stop — and surface where that authority is currently undefined
+- [`governance-design`](plugins/operating-model/skills/governance-design/SKILL.md) · Original · operating-model: Design the review and forum layer for a team or portfolio — which recurring meetings exist, what each one decides, what artifact it requires as input, and which existing…
+- [`okr-tracking`](plugins/operating-model/skills/okr-tracking/SKILL.md) · Original · operating-model: Draft, review, or check in on objectives and key results — including diagnosing OKRs that are really task lists in disguise
+- [`operating-model-builder`](plugins/operating-model/skills/operating-model-builder/SKILL.md) · Original · operating-model: Design an operating model for a team from scratch — purpose, cadence, artifacts, roles, and the decisions the model exists to make possible
+- [`opportunity-scoring`](plugins/portfolio/skills/opportunity-scoring/SKILL.md) · Original · portfolio: Score an opportunity, proposal, vendor, or investment candidate against explicit criteria and produce a comparable, defensible read
+- [`portfolio-health`](plugins/portfolio/skills/portfolio-health/SKILL.md) · Original · portfolio: Produce a whole-portfolio read — where the money and people actually are, what has stalled, what should be killed, and whether the mix matches the stated strategy
+- [`portfolio-intake`](plugins/portfolio/skills/portfolio-intake/SKILL.md) · Original · portfolio: Design or run the front door for a portfolio — how opportunities enter, what information is required before anything is evaluated, and what happens to things that don't…
+- [`resource-allocation`](plugins/portfolio/skills/resource-allocation/SKILL.md) · Original · portfolio: Match a portfolio's demands against a team's real capacity and show where it is oversubscribed, including the person-level constraints that determine dates
 <!-- catalog:end -->
 
 ## How to read the labels
@@ -43,20 +57,23 @@ The labels live in each skill's frontmatter (`metadata.provenance`), and the cat
 
 ## Try it
 
-**Browse.** Every skill is a readable markdown file. Start with a plugin README ([Biz Ops](plugins/bizops/README.md), [Strategy](plugins/strategy/README.md), [Programs](plugins/programs/README.md)) and open whatever catches your eye.
+**Browse.** Every skill is a readable markdown file. Start with a plugin README ([Biz Ops](plugins/bizops/README.md), [Strategy](plugins/strategy/README.md), [Programs](plugins/programs/README.md), [Operating Model](plugins/operating-model/README.md), [Portfolio](plugins/portfolio/README.md), [Intelligence](plugins/intelligence/README.md)) and open whatever catches your eye.
 
 **Claude Code.**
 
 ```bash
-claude plugin marketplace add maiiioi/strategic-operator
+claude plugin marketplace add maitlam/strategic-operator
 claude plugin install bizops@strategic-operator
 claude plugin install strategy@strategic-operator
 claude plugin install programs@strategic-operator
+claude plugin install operating-model@strategic-operator
+claude plugin install portfolio@strategic-operator
+claude plugin install intelligence@strategic-operator
 ```
 
 Skills activate on their own when a request matches, or you can call one directly, like `/programs:dependency-map`.
 
-**Claude Cowork.** Add `maiiioi/strategic-operator` as a marketplace from the plugins directory.
+**Claude Cowork.** Add `maitlam/strategic-operator` as a marketplace from the plugins directory.
 
 **Connectors are optional.** Some skills can pull from tools like Slack, Notion, or Jira if you've connected them, and each plugin's `CONNECTORS.md` explains how. Every skill also works if you just paste in the context.
 
@@ -98,12 +115,14 @@ Merging is three-way: it compares upstream's old version, upstream's new version
 
 ```
 strategic-operator/
-├── .claude-plugin/marketplace.json   # the marketplace: lists the three plugins
+├── .claude-plugin/marketplace.json   # the marketplace: lists the six plugins
 ├── plugins/
 │   ├── bizops/                       # each plugin has the same shape:
 │   ├── strategy/                     #   .claude-plugin/plugin.json  manifest
-│   └── programs/                     #   skills/<name>/SKILL.md      one folder per skill
-│                                     #   README.md, CONNECTORS.md, LICENSES/
+│   ├── programs/                     #   skills/<name>/SKILL.md      one folder per skill
+│   ├── operating-model/              #   README.md, CONNECTORS.md, LICENSES/
+│   ├── portfolio/
+│   └── intelligence/
 ├── templates/                        # starting points for original and adapted skills
 ├── scripts/
 │   ├── catalog.py                    # builds the catalog, checks labels, removes skills
