@@ -11,6 +11,7 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`positioning-brief`](skills/positioning-brief/SKILL.md) | Original | Write or stress-test a one-page positioning brief — who we're for, what we do, why it's different, what we deliberately are not |
 | [`ansoff-matrix`](skills/ansoff-matrix/SKILL.md) | Included | Ansoff Matrix — 4-quadrant framework for growth options: market penetration, market/product development, and diversification |
 | [`business-model-canvas`](skills/business-model-canvas/SKILL.md) | Included | Build, evaluate, and stress-test a Business Model Canvas (Osterwalder) across all 9 blocks |
 | [`gtm-strategy`](skills/gtm-strategy/SKILL.md) | Included | Integrated go-to-market strategy spanning ICP, motion, channels, messaging, success metrics, and launch plan |

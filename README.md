@@ -20,19 +20,20 @@ Three plugins, one for each area I work in. Every skill is labeled so you can se
 | Plugin | Focus | Skills | Original | Adapted | Included |
 |---|---|---|---|---|---|
 | [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 14 | 0 | 3 | 11 |
-| [Discovery](plugins/discovery/README.md) | Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise. | 11 | 1 | 0 | 10 |
-| [Positioning](plugins/positioning/README.md) | Decide where to play and how to win: market frameworks (Porter's, SWOT, Ansoff), business-model canvases, ICP, and go-to-market strategy. | 8 | 0 | 0 | 8 |
-| [Product Planning](plugins/product-planning/README.md) | Turn strategy into product direction: PRDs, product vision, prioritization frameworks, and outcome-driven roadmaps. | 9 | 0 | 0 | 9 |
+| [Discovery](plugins/discovery/README.md) | Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise. | 12 | 2 | 0 | 10 |
+| [Positioning](plugins/positioning/README.md) | Decide where to play and how to win: market frameworks (Porter's, SWOT, Ansoff), business-model canvases, ICP, and go-to-market strategy. | 9 | 1 | 0 | 8 |
+| [Product Planning](plugins/product-planning/README.md) | Turn strategy into product direction: PRDs, product vision, prioritization frameworks, and outcome-driven roadmaps. | 10 | 1 | 0 | 9 |
 | [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 35 | 1 | 1 | 33 |
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 6 | 6 | 0 | 0 |
 | [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 6 | 6 | 0 | 0 |
 | [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief. | 6 | 6 | 0 | 0 |
-| **Total** | | **95** | **20** | **4** | **71** |
+| **Total** | | **98** | **23** | **4** | **71** |
 
-Counts include 86 skills, 1 command, and 8 agents.
+Counts include 89 skills, 1 command, and 8 agents.
 
 ### My original and adapted work
 
+- [`discovery-cadence`](plugins/discovery/skills/discovery-cadence/SKILL.md) · Original · discovery: Design or diagnose the operating rhythm of continuous customer discovery — the weekly beat that produces learning, not the one-off "round of interviews" that produces a…
 - [`product-discovery-researcher`](plugins/discovery/agents/product-discovery-researcher.md) (agent) · Original · discovery: Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence
 - [`competitive-intel`](plugins/intelligence/skills/competitive-intel/SKILL.md) · Original · intelligence: Build a read on a competitor — what they're actually doing versus what they say, where they're strong, where they're exposed, and what their recent moves imply about…
 - [`ecosystem-map`](plugins/intelligence/skills/ecosystem-map/SKILL.md) · Original · intelligence: Segment an unfamiliar market or ecosystem into its structural parts — who the actors are, how value and money move between them, and where the pain concentrates
@@ -52,6 +53,8 @@ Counts include 86 skills, 1 command, and 8 agents.
 - [`portfolio-manager`](plugins/portfolio/agents/portfolio-manager.md) (agent) · Original · portfolio: Track and manage active initiatives across a portfolio — status, resources, dependencies, risks, executive sponsorship — and flag what's at risk or should be killed
 - [`portfolio-prioritizer`](plugins/portfolio/agents/portfolio-prioritizer.md) (agent) · Original · portfolio: Score new opportunities against declared strategic criteria and recommend invest / pause / kill / investigate
 - [`resource-allocation`](plugins/portfolio/skills/resource-allocation/SKILL.md) · Original · portfolio: Match a portfolio's demands against a team's real capacity and show where it is oversubscribed, including the person-level constraints that determine dates
+- [`positioning-brief`](plugins/positioning/skills/positioning-brief/SKILL.md) · Original · positioning: Write or stress-test a one-page positioning brief — who we're for, what we do, why it's different, what we deliberately are not
+- [`prd-quality-gate`](plugins/product-planning/skills/prd-quality-gate/SKILL.md) · Original · product-planning: Review a draft PRD against a short quality checklist before it goes to a stakeholder — is a decision actually being requested, is success measurable, are assumptions…
 - [`launch-readiness`](plugins/programs/agents/launch-readiness.md) (agent) · Original · programs: Evaluate readiness across cross-functional teams before a launch — Product, Engineering, Legal/Privacy, Security, Operations, GTM, Support — and surface blockers,…
 - [`metrics-dashboard`](plugins/bizops/skills/metrics-dashboard/SKILL.md) · Adapted · bizops: Design the whole product metrics dashboard SYSTEM: layers, owners, review cadence, and visualization — the board a team actually reviews on a weekly or monthly rhythm
 - [`north-star-metric`](plugins/bizops/skills/north-star-metric/SKILL.md) · Adapted · bizops: Define the North Star Metric spec: the single number, its input metric tree, leading indicators, anti-metrics, and counter-metrics — with a Python tool that renders it…

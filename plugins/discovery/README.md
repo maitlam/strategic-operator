@@ -11,6 +11,7 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`discovery-cadence`](skills/discovery-cadence/SKILL.md) | Original | Design or diagnose the operating rhythm of continuous customer discovery — the weekly beat that produces learning, not the one-off "round of interviews" that produces a… |
 | [`product-discovery-researcher`](agents/product-discovery-researcher.md) (agent) | Original | Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence |
 | [`brainstorm-experiments`](skills/brainstorm-experiments/SKILL.md) | Included | Experiment design expert using pretotyping and lean validation for both new product concepts and existing product features |
 | [`brainstorm-ideas`](skills/brainstorm-ideas/SKILL.md) | Included | Product ideation expert using Product Trio approach and Opportunity Solution Trees for both new and existing products |
