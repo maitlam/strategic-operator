@@ -20,7 +20,9 @@ Three plugins, one for each area I work in. Every skill is labeled so you can se
 | Plugin | Focus | Skills | Original | Adapted | Included |
 |---|---|---|---|---|---|
 | [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 14 | 0 | 3 | 11 |
-| [Strategy](plugins/strategy/README.md) | Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction. | 28 | 1 | 0 | 27 |
+| [Discovery](plugins/discovery/README.md) | Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise. | 11 | 1 | 0 | 10 |
+| [Positioning](plugins/positioning/README.md) | Decide where to play and how to win: market frameworks (Porter's, SWOT, Ansoff), business-model canvases, ICP, and go-to-market strategy. | 8 | 0 | 0 | 8 |
+| [Product Planning](plugins/product-planning/README.md) | Turn strategy into product direction: PRDs, product vision, prioritization frameworks, and outcome-driven roadmaps. | 9 | 0 | 0 | 9 |
 | [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 35 | 1 | 1 | 33 |
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 6 | 6 | 0 | 0 |
 | [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 6 | 6 | 0 | 0 |
@@ -31,6 +33,7 @@ Counts include 86 skills, 1 command, and 8 agents.
 
 ### My original and adapted work
 
+- [`product-discovery-researcher`](plugins/discovery/agents/product-discovery-researcher.md) (agent) · Original · discovery: Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence
 - [`competitive-intel`](plugins/intelligence/skills/competitive-intel/SKILL.md) · Original · intelligence: Build a read on a competitor — what they're actually doing versus what they say, where they're strong, where they're exposed, and what their recent moves imply about…
 - [`ecosystem-map`](plugins/intelligence/skills/ecosystem-map/SKILL.md) · Original · intelligence: Segment an unfamiliar market or ecosystem into its structural parts — who the actors are, how value and money move between them, and where the pain concentrates
 - [`intelligence-brief`](plugins/intelligence/skills/intelligence-brief/SKILL.md) · Original · intelligence: Produce a recurring market intelligence brief — daily or weekly signals filtered for what actually matters to this team, with the "so what" attached
@@ -50,7 +53,6 @@ Counts include 86 skills, 1 command, and 8 agents.
 - [`portfolio-prioritizer`](plugins/portfolio/agents/portfolio-prioritizer.md) (agent) · Original · portfolio: Score new opportunities against declared strategic criteria and recommend invest / pause / kill / investigate
 - [`resource-allocation`](plugins/portfolio/skills/resource-allocation/SKILL.md) · Original · portfolio: Match a portfolio's demands against a team's real capacity and show where it is oversubscribed, including the person-level constraints that determine dates
 - [`launch-readiness`](plugins/programs/agents/launch-readiness.md) (agent) · Original · programs: Evaluate readiness across cross-functional teams before a launch — Product, Engineering, Legal/Privacy, Security, Operations, GTM, Support — and surface blockers,…
-- [`product-discovery-researcher`](plugins/strategy/agents/product-discovery-researcher.md) (agent) · Original · strategy: Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence
 - [`metrics-dashboard`](plugins/bizops/skills/metrics-dashboard/SKILL.md) · Adapted · bizops: Design the whole product metrics dashboard SYSTEM: layers, owners, review cadence, and visualization — the board a team actually reviews on a weekly or monthly rhythm
 - [`north-star-metric`](plugins/bizops/skills/north-star-metric/SKILL.md) · Adapted · bizops: Define the North Star Metric spec: the single number, its input metric tree, leading indicators, anti-metrics, and counter-metrics — with a Python tool that renders it…
 - [`risk-assessment`](plugins/bizops/skills/risk-assessment/SKILL.md) · Adapted · bizops: Identify, assess, and mitigate ongoing operational risks — the standing risk register that lives across a program or team
@@ -69,18 +71,20 @@ The labels live in each skill's frontmatter (`metadata.provenance`), and the cat
 
 ## Try it
 
-**Browse.** Every skill is a readable markdown file. Start with a plugin README ([Biz Ops](plugins/bizops/README.md), [Strategy](plugins/strategy/README.md), [Programs](plugins/programs/README.md), [Operating Model](plugins/operating-model/README.md), [Portfolio](plugins/portfolio/README.md), [Intelligence](plugins/intelligence/README.md)) and open whatever catches your eye.
+**Browse.** Every skill is a readable markdown file. Start with a plugin README ([Biz Ops](plugins/bizops/README.md), [Programs](plugins/programs/README.md), [Operating Model](plugins/operating-model/README.md), [Portfolio](plugins/portfolio/README.md), [Intelligence](plugins/intelligence/README.md), [Discovery](plugins/discovery/README.md), [Positioning](plugins/positioning/README.md), [Product Planning](plugins/product-planning/README.md)) and open whatever catches your eye.
 
 **Claude Code.**
 
 ```bash
 claude plugin marketplace add maitlam/strategic-operator
 claude plugin install bizops@strategic-operator
-claude plugin install strategy@strategic-operator
 claude plugin install programs@strategic-operator
 claude plugin install operating-model@strategic-operator
 claude plugin install portfolio@strategic-operator
 claude plugin install intelligence@strategic-operator
+claude plugin install discovery@strategic-operator
+claude plugin install positioning@strategic-operator
+claude plugin install product-planning@strategic-operator
 ```
 
 Skills activate on their own when a request matches, or you can call one directly, like `/programs:dependency-map`.
@@ -127,14 +131,16 @@ Merging is three-way: it compares upstream's old version, upstream's new version
 
 ```
 strategic-operator/
-├── .claude-plugin/marketplace.json   # the marketplace: lists the six plugins
+├── .claude-plugin/marketplace.json   # the marketplace: lists the eight plugins
 ├── plugins/
 │   ├── bizops/                       # each plugin has the same shape:
-│   ├── strategy/                     #   .claude-plugin/plugin.json  manifest
-│   ├── programs/                     #   skills/<name>/SKILL.md      one folder per skill
-│   ├── operating-model/              #   README.md, CONNECTORS.md, LICENSES/
-│   ├── portfolio/
-│   └── intelligence/
+│   ├── programs/                     #   .claude-plugin/plugin.json  manifest
+│   ├── operating-model/              #   skills/<name>/SKILL.md      one folder per skill
+│   ├── portfolio/                    #   agents/<name>.md            one file per agent
+│   ├── intelligence/                 #   README.md, CONNECTORS.md, LICENSES/
+│   ├── discovery/
+│   ├── positioning/
+│   └── product-planning/
 ├── templates/                        # starting points for original and adapted skills
 ├── scripts/
 │   ├── catalog.py                    # builds the catalog, checks labels, removes skills

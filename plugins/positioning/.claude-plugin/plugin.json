@@ -1,0 +1,11 @@
+{
+  "name": "positioning",
+  "displayName": "Positioning",
+  "version": "0.1.0",
+  "description": "Decide where to play and how to win: market frameworks (Porter's, SWOT, Ansoff), business-model canvases, ICP, and go-to-market strategy.",
+  "author": {
+    "name": "Mai Lam"
+  },
+  "homepage": "https://github.com/maitlam/strategic-operator",
+  "repository": "https://github.com/maitlam/strategic-operator"
+}

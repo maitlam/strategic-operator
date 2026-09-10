@@ -1,0 +1,11 @@
+{
+  "name": "discovery",
+  "displayName": "Discovery",
+  "version": "0.1.0",
+  "description": "Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise.",
+  "author": {
+    "name": "Mai Lam"
+  },
+  "homepage": "https://github.com/maitlam/strategic-operator",
+  "repository": "https://github.com/maitlam/strategic-operator"
+}

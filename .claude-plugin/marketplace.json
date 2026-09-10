@@ -13,10 +13,22 @@
       "description": "Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things."
     },
     {
-      "name": "strategy",
-      "displayName": "Strategy",
-      "source": "./plugins/strategy",
-      "description": "Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction."
+      "name": "discovery",
+      "displayName": "Discovery",
+      "source": "./plugins/discovery",
+      "description": "Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise."
+    },
+    {
+      "name": "positioning",
+      "displayName": "Positioning",
+      "source": "./plugins/positioning",
+      "description": "Decide where to play and how to win: market frameworks (Porter's, SWOT, Ansoff), business-model canvases, ICP, and go-to-market strategy."
+    },
+    {
+      "name": "product-planning",
+      "displayName": "Product Planning",
+      "source": "./plugins/product-planning",
+      "description": "Turn strategy into product direction: PRDs, product vision, prioritization frameworks, and outcome-driven roadmaps."
     },
     {
       "name": "programs",

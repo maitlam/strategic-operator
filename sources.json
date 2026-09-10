@@ -102,157 +102,157 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/roadmap-update",
+      "local": "plugins/product-planning/skills/roadmap-update",
       "upstream": "anthropic",
       "path": "product-management/skills/roadmap-update",
       "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
     },
     {
-      "local": "plugins/strategy/skills/synthesize-research",
+      "local": "plugins/discovery/skills/synthesize-research",
       "upstream": "anthropic",
       "path": "product-management/skills/synthesize-research",
       "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
     },
     {
-      "local": "plugins/strategy/skills/brainstorm-experiments",
+      "local": "plugins/discovery/skills/brainstorm-experiments",
       "upstream": "borghei",
       "path": "project-management/discovery/brainstorm-experiments",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/brainstorm-ideas",
+      "local": "plugins/discovery/skills/brainstorm-ideas",
       "upstream": "borghei",
       "path": "project-management/discovery/brainstorm-ideas",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/customer-interview-script",
+      "local": "plugins/discovery/skills/customer-interview-script",
       "upstream": "borghei",
       "path": "project-management/discovery/customer-interview-script",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/identify-assumptions",
+      "local": "plugins/discovery/skills/identify-assumptions",
       "upstream": "borghei",
       "path": "project-management/discovery/identify-assumptions",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/interview-synthesis",
+      "local": "plugins/discovery/skills/interview-synthesis",
       "upstream": "borghei",
       "path": "project-management/discovery/interview-synthesis",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/jtbd-workshop",
+      "local": "plugins/discovery/skills/jtbd-workshop",
       "upstream": "borghei",
       "path": "project-management/discovery/jtbd-workshop",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/opportunity-solution-tree",
+      "local": "plugins/discovery/skills/opportunity-solution-tree",
       "upstream": "borghei",
       "path": "project-management/discovery/opportunity-solution-tree",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/value-proposition-canvas",
+      "local": "plugins/positioning/skills/value-proposition-canvas",
       "upstream": "borghei",
       "path": "project-management/discovery/value-proposition-canvas",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/ai-feature-prd",
+      "local": "plugins/product-planning/skills/ai-feature-prd",
       "upstream": "borghei",
       "path": "project-management/execution/ai-feature-prd",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/create-prd",
+      "local": "plugins/product-planning/skills/create-prd",
       "upstream": "borghei",
       "path": "project-management/execution/create-prd",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/customer-feedback-triage",
+      "local": "plugins/discovery/skills/customer-feedback-triage",
       "upstream": "borghei",
       "path": "project-management/execution/customer-feedback-triage",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/outcome-roadmap",
+      "local": "plugins/product-planning/skills/outcome-roadmap",
       "upstream": "borghei",
       "path": "project-management/execution/outcome-roadmap",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/prfaq",
+      "local": "plugins/product-planning/skills/prfaq",
       "upstream": "borghei",
       "path": "project-management/execution/prfaq",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/pricing-prd",
+      "local": "plugins/product-planning/skills/pricing-prd",
       "upstream": "borghei",
       "path": "project-management/execution/pricing-prd",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/prioritization-frameworks",
+      "local": "plugins/product-planning/skills/prioritization-frameworks",
       "upstream": "borghei",
       "path": "project-management/execution/prioritization-frameworks",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/product-vision",
+      "local": "plugins/product-planning/skills/product-vision",
       "upstream": "borghei",
       "path": "project-management/execution/product-vision",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/roadmap-communication",
+      "local": "plugins/product-planning/skills/roadmap-communication",
       "upstream": "borghei",
       "path": "project-management/execution/roadmap-communication",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/gtm-strategy",
+      "local": "plugins/positioning/skills/gtm-strategy",
       "upstream": "borghei",
       "path": "project-management/gtm/gtm-strategy",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/ideal-customer-profile",
+      "local": "plugins/positioning/skills/ideal-customer-profile",
       "upstream": "borghei",
       "path": "project-management/gtm/ideal-customer-profile",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/ansoff-matrix",
+      "local": "plugins/positioning/skills/ansoff-matrix",
       "upstream": "borghei",
       "path": "project-management/strategy-frameworks/ansoff-matrix",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/business-model-canvas",
+      "local": "plugins/positioning/skills/business-model-canvas",
       "upstream": "borghei",
       "path": "project-management/strategy-frameworks/business-model-canvas",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/lean-canvas",
+      "local": "plugins/positioning/skills/lean-canvas",
       "upstream": "borghei",
       "path": "project-management/strategy-frameworks/lean-canvas",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/porters-five-forces",
+      "local": "plugins/positioning/skills/porters-five-forces",
       "upstream": "borghei",
       "path": "project-management/strategy-frameworks/porters-five-forces",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/swot-analysis",
+      "local": "plugins/positioning/skills/swot-analysis",
       "upstream": "borghei",
       "path": "project-management/strategy-frameworks/swot-analysis",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
@@ -462,7 +462,7 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/commands/brainstorm.md",
+      "local": "plugins/discovery/commands/brainstorm.md",
       "upstream": "anthropic",
       "path": "product-management/commands/brainstorm.md",
       "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
@@ -474,7 +474,19 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/SHARED_OUTPUT_SCHEMA.md",
+      "local": "plugins/discovery/SHARED_OUTPUT_SCHEMA.md",
+      "upstream": "borghei",
+      "path": "project-management/SHARED_OUTPUT_SCHEMA.md",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/positioning/SHARED_OUTPUT_SCHEMA.md",
+      "upstream": "borghei",
+      "path": "project-management/SHARED_OUTPUT_SCHEMA.md",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/product-planning/SHARED_OUTPUT_SCHEMA.md",
       "upstream": "borghei",
       "path": "project-management/SHARED_OUTPUT_SCHEMA.md",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
