@@ -18,7 +18,6 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`beta-program`](skills/beta-program/SKILL.md) | Included | Closed beta program playbook covering recruitment, success criteria, communication cadence, and beta-to-GA exit gates |
 | [`confluence-expert`](skills/confluence-expert/SKILL.md) | Included | Confluence expert for spaces, knowledge bases, documentation, page layouts, macros, templates, and Jira-Confluence integration |
 | [`cycle-time-analyzer`](skills/cycle-time-analyzer/SKILL.md) | Included | Flow metrics analyzer (lead time, cycle time, throughput, WIP, aging WIP) for sprint and team health, with cumulative flow diagrams |
-| [`daci-framework`](skills/daci-framework/SKILL.md) | Included | DACI decision facilitation framework (Driver, Approver, Contributor, Informed) for clarifying decision ownership, reducing decision thrash, role assignment, and… |
 | [`delivery-manager`](skills/delivery-manager/SKILL.md) | Included | Expert delivery management for release planning, deployment strategy, incident response, change management, SLA/error-budget tracking, and DORA metrics across continuous… |
 | [`dependency-map`](skills/dependency-map/SKILL.md) | Included | Cross-team dependency tracking with critical path analysis and Mermaid dependency graphs for program coordination |
 | [`eol-communication`](skills/eol-communication/SKILL.md) | Included | End-of-life product messaging and sunset communication framework for clear, empathetic EOL announcements that preserve customer trust |
@@ -40,7 +39,6 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`scrum-master`](skills/scrum-master/SKILL.md) | Included | Data-driven Scrum Master for sprint health scoring, Monte Carlo velocity forecasting, retrospective analysis, capacity planning, and Tuckman team coaching |
 | [`senior-pm`](skills/senior-pm/SKILL.md) | Included | Senior PM for enterprise software and SaaS — portfolio management, quantitative risk analysis, prioritization, and executive reporting |
 | [`sprint-plan`](skills/sprint-plan/SKILL.md) | Included | Plan a sprint that ships — capacity, commitment vs stretch, dependencies, and risk identification that prevents mid-sprint surprises |
-| [`sprint-planning`](skills/sprint-planning/SKILL.md) | Included | Plan a sprint — scope work, estimate capacity, set goals, and draft a sprint plan |
 | [`sprint-retrospective`](skills/sprint-retrospective/SKILL.md) | Included | Data-driven sprint retrospectives from git history — velocity, cycle/lead time, contributor insights, and churn hotspots |
 | [`stakeholder-map`](skills/stakeholder-map/SKILL.md) | Included | Map stakeholders by power × interest and design a communication plan that prevents surprise objections |
 | [`stakeholder-update`](skills/stakeholder-update/SKILL.md) | Included | Generate a stakeholder update tailored to audience and cadence |

@@ -16,7 +16,6 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`brainstorm-experiments`](skills/brainstorm-experiments/SKILL.md) | Included | Experiment design expert using pretotyping and lean validation for both new product concepts and existing product features |
 | [`brainstorm-ideas`](skills/brainstorm-ideas/SKILL.md) | Included | Product ideation expert using Product Trio approach and Opportunity Solution Trees for both new and existing products |
 | [`business-model-canvas`](skills/business-model-canvas/SKILL.md) | Included | Build, evaluate, and stress-test a Business Model Canvas (Osterwalder) across all 9 blocks |
-| [`competitive-brief`](skills/competitive-brief/SKILL.md) | Included | Create a competitive analysis brief for one or more competitors or a feature area |
 | [`create-prd`](skills/create-prd/SKILL.md) | Included | PRD scaffolding expert that generates structured product requirements documents using an 8-section framework, problem framing canvas, and working-backwards press release |
 | [`customer-feedback-triage`](skills/customer-feedback-triage/SKILL.md) | Included | Inbound customer-feedback triage system |
 | [`customer-interview-script`](skills/customer-interview-script/SKILL.md) | Included | Run high-signal customer discovery interviews using a scripted question hierarchy, behavior-over-opinion probes, and rapport techniques drawn from Portigal, Torres,… |
@@ -32,13 +31,11 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`prfaq`](skills/prfaq/SKILL.md) | Included | Amazon Working Backwards PR/FAQ generator that forces customer-outcome thinking before any code is written |
 | [`pricing-prd`](skills/pricing-prd/SKILL.md) | Included | Tactical PM PRD for pricing experiments and pricing-page launches |
 | [`prioritization-frameworks`](skills/prioritization-frameworks/SKILL.md) | Included | Comprehensive prioritization framework expert covering 9 methods with scoring tools and decision guidance for product managers |
-| [`product-brainstorming`](skills/product-brainstorming/SKILL.md) | Included | Brainstorm product ideas, explore problem spaces, and challenge assumptions as a thinking partner |
 | [`product-vision`](skills/product-vision/SKILL.md) | Included | Write the Product Vision document -- the durable 5-10 year narrative above the north-star metric -- using Pichler's Vision Board, Moore's elevator pitch, Raskin's… |
 | [`roadmap-communication`](skills/roadmap-communication/SKILL.md) | Included | Same roadmap, three audiences |
 | [`roadmap-update`](skills/roadmap-update/SKILL.md) | Included | Update, create, or reprioritize your product roadmap |
 | [`swot-analysis`](skills/swot-analysis/SKILL.md) | Included | SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for strategic positioning |
 | [`synthesize-research`](skills/synthesize-research/SKILL.md) | Included | Synthesize user research from interviews, surveys, and feedback into structured insights |
 | [`value-proposition-canvas`](skills/value-proposition-canvas/SKILL.md) | Included | Strategyzer Value Proposition Canvas (Customer Profile + Value Map) with fit validation across problem-solution, product-market, and business-model dimensions |
-| [`write-spec`](skills/write-spec/SKILL.md) | Included | Write a feature spec or PRD from a problem statement or feature idea |
 | [`/brainstorm`](commands/brainstorm.md) (command) | Included | Brainstorm a product idea, problem space, or strategic question with a sharp thinking partner |
 <!-- catalog:end -->

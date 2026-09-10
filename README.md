@@ -19,15 +19,15 @@ Three plugins, one for each area I work in. Every skill is labeled so you can se
 <!-- catalog:start -->
 | Plugin | Focus | Skills | Original | Adapted | Included |
 |---|---|---|---|---|---|
-| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 18 | 0 | 0 | 18 |
-| [Strategy](plugins/strategy/README.md) | Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction. | 30 | 0 | 0 | 30 |
-| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 38 | 0 | 0 | 38 |
+| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 14 | 0 | 0 | 14 |
+| [Strategy](plugins/strategy/README.md) | Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction. | 27 | 0 | 0 | 27 |
+| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 36 | 0 | 0 | 36 |
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 4 | 4 | 0 | 0 |
 | [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 4 | 4 | 0 | 0 |
 | [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief. | 4 | 4 | 0 | 0 |
-| **Total** | | **98** | **12** | **0** | **86** |
+| **Total** | | **89** | **12** | **0** | **77** |
 
-Counts include 97 skills, 1 command, and 0 agents.
+Counts include 88 skills, 1 command, and 0 agents.
 
 ### My original and adapted work
 

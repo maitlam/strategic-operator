@@ -30,12 +30,6 @@
       "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
     },
     {
-      "local": "plugins/bizops/skills/capacity-plan",
-      "upstream": "anthropic",
-      "path": "operations/skills/capacity-plan",
-      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
-    },
-    {
       "local": "plugins/bizops/skills/process-doc",
       "upstream": "anthropic",
       "path": "operations/skills/process-doc",
@@ -45,12 +39,6 @@
       "local": "plugins/bizops/skills/risk-assessment",
       "upstream": "anthropic",
       "path": "operations/skills/risk-assessment",
-      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
-    },
-    {
-      "local": "plugins/bizops/skills/status-report",
-      "upstream": "anthropic",
-      "path": "operations/skills/status-report",
       "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
     },
     {
@@ -84,12 +72,6 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/bizops/skills/summarize-meeting",
-      "upstream": "borghei",
-      "path": "project-management/execution/summarize-meeting",
-      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
-    },
-    {
       "local": "plugins/bizops/skills/team-communications",
       "upstream": "borghei",
       "path": "project-management/team-communications",
@@ -108,12 +90,6 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/bizops/skills/brainstorm-okrs",
-      "upstream": "borghei",
-      "path": "project-management/execution/brainstorm-okrs",
-      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
-    },
-    {
       "local": "plugins/bizops/skills/north-star-metric",
       "upstream": "borghei",
       "path": "project-management/execution/north-star-metric",
@@ -126,33 +102,15 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/strategy/skills/competitive-brief",
-      "upstream": "anthropic",
-      "path": "product-management/skills/competitive-brief",
-      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
-    },
-    {
       "local": "plugins/strategy/skills/roadmap-update",
       "upstream": "anthropic",
       "path": "product-management/skills/roadmap-update",
       "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
     },
     {
-      "local": "plugins/strategy/skills/product-brainstorming",
-      "upstream": "anthropic",
-      "path": "product-management/skills/product-brainstorming",
-      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
-    },
-    {
       "local": "plugins/strategy/skills/synthesize-research",
       "upstream": "anthropic",
       "path": "product-management/skills/synthesize-research",
-      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
-    },
-    {
-      "local": "plugins/strategy/skills/write-spec",
-      "upstream": "anthropic",
-      "path": "product-management/skills/write-spec",
       "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
     },
     {
@@ -300,12 +258,6 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/programs/skills/sprint-planning",
-      "upstream": "anthropic",
-      "path": "product-management/skills/sprint-planning",
-      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
-    },
-    {
       "local": "plugins/programs/skills/stakeholder-update",
       "upstream": "anthropic",
       "path": "product-management/skills/stakeholder-update",
@@ -435,12 +387,6 @@
       "local": "plugins/programs/skills/cycle-time-analyzer",
       "upstream": "borghei",
       "path": "project-management/execution/cycle-time-analyzer",
-      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
-    },
-    {
-      "local": "plugins/programs/skills/daci-framework",
-      "upstream": "borghei",
-      "path": "project-management/execution/daci-framework",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {

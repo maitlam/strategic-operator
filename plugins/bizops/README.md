@@ -12,8 +12,6 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | Skill | Type | What it does |
 |---|---|---|
 | [`activation-funnel`](skills/activation-funnel/SKILL.md) | Included | Design and analyze activation funnels (AARRR / AAARRR Pirate Metrics) with conversion + drop-off math, bottleneck detection, and Mermaid funnel diagrams |
-| [`brainstorm-okrs`](skills/brainstorm-okrs/SKILL.md) | Included | OKR brainstorming and validation using the Radical Focus framework — outcome objectives, measurable key results, counter-metrics |
-| [`capacity-plan`](skills/capacity-plan/SKILL.md) | Included | Plan resource capacity — workload analysis and utilization forecasting |
 | [`change-request`](skills/change-request/SKILL.md) | Included | Create a change management request with impact analysis and rollback plan |
 | [`compliance-tracking`](skills/compliance-tracking/SKILL.md) | Included | Track compliance requirements and audit readiness |
 | [`meeting-analyzer`](skills/meeting-analyzer/SKILL.md) | Included | Turn meeting notes into an accountable register — extract decisions, actions and open questions, flag ownerless items, track follow-through |
@@ -25,8 +23,6 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`quarterly-planning`](skills/quarterly-planning/SKILL.md) | Included | Run the full quarterly planning cycle -- pre-quarter homework, kickoff, weekly Wodtke rhythm, mid-quarter check-in, and close retro -- using Radical Focus, Cagan… |
 | [`risk-assessment`](skills/risk-assessment/SKILL.md) | Included | Identify, assess, and mitigate operational risks |
 | [`runbook`](skills/runbook/SKILL.md) | Included | Create or update an operational runbook for a recurring task or procedure |
-| [`status-report`](skills/status-report/SKILL.md) | Included | Generate a status report with KPIs, risks, and action items |
-| [`summarize-meeting`](skills/summarize-meeting/SKILL.md) | Included | Structured meeting summarization that captures decisions, action items, and open questions in a consistent format |
 | [`team-communications`](skills/team-communications/SKILL.md) | Included | Design a delivery team's communication system — channel routing, meeting-load reduction, status structure, escalation SLAs, timezone norms |
 | [`vendor-review`](skills/vendor-review/SKILL.md) | Included | Evaluate a vendor — cost analysis, risk assessment, and recommendation |
 <!-- catalog:end -->
