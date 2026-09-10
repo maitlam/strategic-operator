@@ -1,0 +1,28 @@
+{
+  "name": "strategic-operator",
+  "owner": {
+    "name": "Mai Lam",
+    "url": "https://github.com/maiiioi"
+  },
+  "description": "Open-source Claude skills for Biz Ops, Strategy, and Program Management.",
+  "plugins": [
+    {
+      "name": "bizops",
+      "displayName": "Biz Ops",
+      "source": "./plugins/bizops",
+      "description": "Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things."
+    },
+    {
+      "name": "strategy",
+      "displayName": "Strategy",
+      "source": "./plugins/strategy",
+      "description": "Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction."
+    },
+    {
+      "name": "programs",
+      "displayName": "Programs",
+      "source": "./plugins/programs",
+      "description": "Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on."
+    }
+  ]
+}

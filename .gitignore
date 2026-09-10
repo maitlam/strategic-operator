@@ -1,0 +1,4 @@
+.cache/
+.upstream-patches/
+__pycache__/
+.DS_Store

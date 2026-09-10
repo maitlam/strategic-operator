@@ -1,0 +1,555 @@
+{
+  "_readme": "Upstream provenance for every Included or Adapted item: where it came from and the upstream commit it was last synced to. Original work is never listed here. Used by scripts/check_upstream.py and checked by scripts/catalog.py.",
+  "upstreams": {
+    "anthropic": {
+      "repo": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "branch": "main",
+      "license": "Apache-2.0",
+      "author": "Anthropic",
+      "web": "https://github.com/anthropics/knowledge-work-plugins"
+    },
+    "borghei": {
+      "repo": "https://github.com/borghei/Claude-Skills.git",
+      "branch": "main",
+      "license": "MIT + Commons Clause",
+      "author": "borghei",
+      "web": "https://github.com/borghei/Claude-Skills"
+    }
+  },
+  "items": [
+    {
+      "local": "plugins/bizops/skills/runbook",
+      "upstream": "anthropic",
+      "path": "operations/skills/runbook",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/change-request",
+      "upstream": "anthropic",
+      "path": "operations/skills/change-request",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/capacity-plan",
+      "upstream": "anthropic",
+      "path": "operations/skills/capacity-plan",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/process-doc",
+      "upstream": "anthropic",
+      "path": "operations/skills/process-doc",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/risk-assessment",
+      "upstream": "anthropic",
+      "path": "operations/skills/risk-assessment",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/status-report",
+      "upstream": "anthropic",
+      "path": "operations/skills/status-report",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/vendor-review",
+      "upstream": "anthropic",
+      "path": "operations/skills/vendor-review",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/process-optimization",
+      "upstream": "anthropic",
+      "path": "operations/skills/process-optimization",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/compliance-tracking",
+      "upstream": "anthropic",
+      "path": "operations/skills/compliance-tracking",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/metrics-review",
+      "upstream": "anthropic",
+      "path": "product-management/skills/metrics-review",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/skills/meeting-analyzer",
+      "upstream": "borghei",
+      "path": "project-management/meeting-analyzer",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/bizops/skills/summarize-meeting",
+      "upstream": "borghei",
+      "path": "project-management/execution/summarize-meeting",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/bizops/skills/team-communications",
+      "upstream": "borghei",
+      "path": "project-management/team-communications",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/bizops/skills/metrics-dashboard",
+      "upstream": "borghei",
+      "path": "project-management/discovery/metrics-dashboard",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/bizops/skills/activation-funnel",
+      "upstream": "borghei",
+      "path": "project-management/execution/activation-funnel",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/bizops/skills/brainstorm-okrs",
+      "upstream": "borghei",
+      "path": "project-management/execution/brainstorm-okrs",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/bizops/skills/north-star-metric",
+      "upstream": "borghei",
+      "path": "project-management/execution/north-star-metric",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/bizops/skills/quarterly-planning",
+      "upstream": "borghei",
+      "path": "project-management/execution/quarterly-planning",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/competitive-brief",
+      "upstream": "anthropic",
+      "path": "product-management/skills/competitive-brief",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/strategy/skills/roadmap-update",
+      "upstream": "anthropic",
+      "path": "product-management/skills/roadmap-update",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/strategy/skills/product-brainstorming",
+      "upstream": "anthropic",
+      "path": "product-management/skills/product-brainstorming",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/strategy/skills/synthesize-research",
+      "upstream": "anthropic",
+      "path": "product-management/skills/synthesize-research",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/strategy/skills/write-spec",
+      "upstream": "anthropic",
+      "path": "product-management/skills/write-spec",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/strategy/skills/brainstorm-experiments",
+      "upstream": "borghei",
+      "path": "project-management/discovery/brainstorm-experiments",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/brainstorm-ideas",
+      "upstream": "borghei",
+      "path": "project-management/discovery/brainstorm-ideas",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/customer-interview-script",
+      "upstream": "borghei",
+      "path": "project-management/discovery/customer-interview-script",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/identify-assumptions",
+      "upstream": "borghei",
+      "path": "project-management/discovery/identify-assumptions",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/interview-synthesis",
+      "upstream": "borghei",
+      "path": "project-management/discovery/interview-synthesis",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/jtbd-workshop",
+      "upstream": "borghei",
+      "path": "project-management/discovery/jtbd-workshop",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/opportunity-solution-tree",
+      "upstream": "borghei",
+      "path": "project-management/discovery/opportunity-solution-tree",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/value-proposition-canvas",
+      "upstream": "borghei",
+      "path": "project-management/discovery/value-proposition-canvas",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/ai-feature-prd",
+      "upstream": "borghei",
+      "path": "project-management/execution/ai-feature-prd",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/create-prd",
+      "upstream": "borghei",
+      "path": "project-management/execution/create-prd",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/customer-feedback-triage",
+      "upstream": "borghei",
+      "path": "project-management/execution/customer-feedback-triage",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/outcome-roadmap",
+      "upstream": "borghei",
+      "path": "project-management/execution/outcome-roadmap",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/prfaq",
+      "upstream": "borghei",
+      "path": "project-management/execution/prfaq",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/pricing-prd",
+      "upstream": "borghei",
+      "path": "project-management/execution/pricing-prd",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/prioritization-frameworks",
+      "upstream": "borghei",
+      "path": "project-management/execution/prioritization-frameworks",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/product-vision",
+      "upstream": "borghei",
+      "path": "project-management/execution/product-vision",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/roadmap-communication",
+      "upstream": "borghei",
+      "path": "project-management/execution/roadmap-communication",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/gtm-strategy",
+      "upstream": "borghei",
+      "path": "project-management/gtm/gtm-strategy",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/ideal-customer-profile",
+      "upstream": "borghei",
+      "path": "project-management/gtm/ideal-customer-profile",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/ansoff-matrix",
+      "upstream": "borghei",
+      "path": "project-management/strategy-frameworks/ansoff-matrix",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/business-model-canvas",
+      "upstream": "borghei",
+      "path": "project-management/strategy-frameworks/business-model-canvas",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/lean-canvas",
+      "upstream": "borghei",
+      "path": "project-management/strategy-frameworks/lean-canvas",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/porters-five-forces",
+      "upstream": "borghei",
+      "path": "project-management/strategy-frameworks/porters-five-forces",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/skills/swot-analysis",
+      "upstream": "borghei",
+      "path": "project-management/strategy-frameworks/swot-analysis",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/sprint-planning",
+      "upstream": "anthropic",
+      "path": "product-management/skills/sprint-planning",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/programs/skills/stakeholder-update",
+      "upstream": "anthropic",
+      "path": "product-management/skills/stakeholder-update",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/programs/skills/agile-coach",
+      "upstream": "borghei",
+      "path": "project-management/agile-coach",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/atlassian-admin",
+      "upstream": "borghei",
+      "path": "project-management/atlassian-admin",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/atlassian-templates",
+      "upstream": "borghei",
+      "path": "project-management/atlassian-templates",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/confluence-expert",
+      "upstream": "borghei",
+      "path": "project-management/confluence-expert",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/delivery-manager",
+      "upstream": "borghei",
+      "path": "project-management/delivery-manager",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/jira-expert",
+      "upstream": "borghei",
+      "path": "project-management/jira-expert",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/linear-expert",
+      "upstream": "borghei",
+      "path": "project-management/linear-expert",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/notion-pm",
+      "upstream": "borghei",
+      "path": "project-management/notion-pm",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/productboard-expert",
+      "upstream": "borghei",
+      "path": "project-management/productboard-expert",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/program-manager",
+      "upstream": "borghei",
+      "path": "project-management/program-manager",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/scrum-master",
+      "upstream": "borghei",
+      "path": "project-management/scrum-master",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/senior-pm",
+      "upstream": "borghei",
+      "path": "project-management/senior-pm",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/sprint-retrospective",
+      "upstream": "borghei",
+      "path": "project-management/sprint-retrospective",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/pm-1on1s",
+      "upstream": "borghei",
+      "path": "project-management/career/pm-1on1s",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/pm-career-ladder",
+      "upstream": "borghei",
+      "path": "project-management/career/pm-career-ladder",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/pm-interview-prep",
+      "upstream": "borghei",
+      "path": "project-management/career/pm-interview-prep",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/pm-onboarding",
+      "upstream": "borghei",
+      "path": "project-management/career/pm-onboarding",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/pre-mortem",
+      "upstream": "borghei",
+      "path": "project-management/discovery/pre-mortem",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/backlog-refinement",
+      "upstream": "borghei",
+      "path": "project-management/execution/backlog-refinement",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/beta-program",
+      "upstream": "borghei",
+      "path": "project-management/execution/beta-program",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/cycle-time-analyzer",
+      "upstream": "borghei",
+      "path": "project-management/execution/cycle-time-analyzer",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/daci-framework",
+      "upstream": "borghei",
+      "path": "project-management/execution/daci-framework",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/dependency-map",
+      "upstream": "borghei",
+      "path": "project-management/execution/dependency-map",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/eol-communication",
+      "upstream": "borghei",
+      "path": "project-management/execution/eol-communication",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/feature-flag-strategy",
+      "upstream": "borghei",
+      "path": "project-management/execution/feature-flag-strategy",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/job-stories",
+      "upstream": "borghei",
+      "path": "project-management/execution/job-stories",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/launch-playbook",
+      "upstream": "borghei",
+      "path": "project-management/execution/launch-playbook",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/post-mortem",
+      "upstream": "borghei",
+      "path": "project-management/execution/post-mortem",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/release-notes",
+      "upstream": "borghei",
+      "path": "project-management/execution/release-notes",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/sprint-plan",
+      "upstream": "borghei",
+      "path": "project-management/execution/sprint-plan",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/stakeholder-map",
+      "upstream": "borghei",
+      "path": "project-management/execution/stakeholder-map",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/status-update-generator",
+      "upstream": "borghei",
+      "path": "project-management/execution/status-update-generator",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/story-mapping",
+      "upstream": "borghei",
+      "path": "project-management/execution/story-mapping",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/story-splitting",
+      "upstream": "borghei",
+      "path": "project-management/execution/story-splitting",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/test-scenarios",
+      "upstream": "borghei",
+      "path": "project-management/execution/test-scenarios",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/skills/wwas",
+      "upstream": "borghei",
+      "path": "project-management/execution/wwas",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/commands/brainstorm.md",
+      "upstream": "anthropic",
+      "path": "product-management/commands/brainstorm.md",
+      "synced_sha": "11ac5eeaca27c764913a06f1e61a7cb712790b1a"
+    },
+    {
+      "local": "plugins/bizops/SHARED_OUTPUT_SCHEMA.md",
+      "upstream": "borghei",
+      "path": "project-management/SHARED_OUTPUT_SCHEMA.md",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/strategy/SHARED_OUTPUT_SCHEMA.md",
+      "upstream": "borghei",
+      "path": "project-management/SHARED_OUTPUT_SCHEMA.md",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    },
+    {
+      "local": "plugins/programs/SHARED_OUTPUT_SCHEMA.md",
+      "upstream": "borghei",
+      "path": "project-management/SHARED_OUTPUT_SCHEMA.md",
+      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
+    }
+  ]
+}

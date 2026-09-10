@@ -1,0 +1,11 @@
+{
+  "name": "strategy",
+  "displayName": "Strategy",
+  "version": "0.1.0",
+  "description": "Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction.",
+  "author": {
+    "name": "Mai Lam"
+  },
+  "homepage": "https://github.com/maiiioi/strategic-operator",
+  "repository": "https://github.com/maiiioi/strategic-operator"
+}
