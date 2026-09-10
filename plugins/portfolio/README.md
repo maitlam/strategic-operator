@@ -35,4 +35,6 @@ Intake and scoring are deliberately separate skills. Intake decides whether some
 | [`portfolio-health`](skills/portfolio-health/SKILL.md) | Original | Produce a whole-portfolio read — where the money and people actually are, what has stalled, what should be killed, and whether the mix matches the stated strategy |
 | [`portfolio-intake`](skills/portfolio-intake/SKILL.md) | Original | Design or run the front door for a portfolio — how opportunities enter, what information is required before anything is evaluated, and what happens to things that don't… |
 | [`resource-allocation`](skills/resource-allocation/SKILL.md) | Original | Match a portfolio's demands against a team's real capacity and show where it is oversubscribed, including the person-level constraints that determine dates |
+| [`portfolio-manager`](agents/portfolio-manager.md) (agent) | Original | Track and manage active initiatives across a portfolio — status, resources, dependencies, risks, executive sponsorship — and flag what's at risk or should be killed |
+| [`portfolio-prioritizer`](agents/portfolio-prioritizer.md) (agent) | Original | Score new opportunities against declared strategic criteria and recommend invest / pause / kill / investigate |
 <!-- catalog:end -->

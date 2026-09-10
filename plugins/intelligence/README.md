@@ -35,4 +35,6 @@ Most of what this domain produces is negative information — segments and targe
 | [`ecosystem-map`](skills/ecosystem-map/SKILL.md) | Original | Segment an unfamiliar market or ecosystem into its structural parts — who the actors are, how value and money move between them, and where the pain concentrates |
 | [`intelligence-brief`](skills/intelligence-brief/SKILL.md) | Original | Produce a recurring market intelligence brief — daily or weekly signals filtered for what actually matters to this team, with the "so what" attached |
 | [`partner-scan`](skills/partner-scan/SKILL.md) | Original | Profile a specific company as a potential partner — what they do, who they serve, how they make money, what they'd want from a partnership, and what would have to be… |
+| [`market-landscape-analyzer`](agents/market-landscape-analyzer.md) (agent) | Original | Map an unfamiliar market, space, vertical, or ecosystem — segment the actors, trace value and money flow, identify pain concentration, and flag white space |
+| [`partner-intelligence`](agents/partner-intelligence.md) (agent) | Original | Research and profile a named company or organization as a potential partner, vendor, channel, or acquirer target |
 <!-- catalog:end -->

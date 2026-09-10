@@ -33,4 +33,6 @@ Two failure patterns these are built against. Governance that only adds, never d
 | [`governance-design`](skills/governance-design/SKILL.md) | Original | Design the review and forum layer for a team or portfolio — which recurring meetings exist, what each one decides, what artifact it requires as input, and which existing… |
 | [`okr-tracking`](skills/okr-tracking/SKILL.md) | Original | Draft, review, or check in on objectives and key results — including diagnosing OKRs that are really task lists in disguise |
 | [`operating-model-builder`](skills/operating-model-builder/SKILL.md) | Original | Design an operating model for a team from scratch — purpose, cadence, artifacts, roles, and the decisions the model exists to make possible |
+| [`decision-memo`](agents/decision-memo.md) (agent) | Original | Turn evidence, options, and stakeholder input into a structured decision memo — context, options, tradeoffs, recommendation, risks, and a clear decision request |
+| [`operating-model-designer`](agents/operating-model-designer.md) (agent) | Original | Design a team's operating model from ambiguous inputs — purpose, cadence, artifacts, roles, decision rights, governance forums, and OKRs |
 <!-- catalog:end -->

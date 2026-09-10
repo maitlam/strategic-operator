@@ -11,6 +11,7 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`launch-readiness`](agents/launch-readiness.md) (agent) | Original | Evaluate readiness across cross-functional teams before a launch — Product, Engineering, Legal/Privacy, Security, Operations, GTM, Support — and surface blockers,… |
 | [`pre-mortem`](skills/pre-mortem/SKILL.md) | Adapted | Pre-launch imagined-failure exercise: classify risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen |
 | [`agile-coach`](skills/agile-coach/SKILL.md) | Included | Expert agile coaching: framework selection, maturity assessment, retrospective facilitation, transformation roadmaps |
 | [`atlassian-admin`](skills/atlassian-admin/SKILL.md) | Included | Administer the Atlassian suite (Jira/Confluence): user provisioning, groups, SSO/SAML, permissions, security policies, marketplace apps, backups, and org-wide governance |

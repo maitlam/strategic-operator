@@ -11,6 +11,7 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`product-discovery-researcher`](agents/product-discovery-researcher.md) (agent) | Original | Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence |
 | [`ai-feature-prd`](skills/ai-feature-prd/SKILL.md) | Included | AI/ML feature PRD scaffolding for the modern AI product manager |
 | [`ansoff-matrix`](skills/ansoff-matrix/SKILL.md) | Included | Ansoff Matrix — 4-quadrant framework for growth options: market penetration, market/product development, and diversification |
 | [`brainstorm-experiments`](skills/brainstorm-experiments/SKILL.md) | Included | Experiment design expert using pretotyping and lean validation for both new product concepts and existing product features |
