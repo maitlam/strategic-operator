@@ -1,15 +1,19 @@
 ---
 name: north-star-metric
 description: >
-  Define a North Star Metric (NSM) and its input metric tree, with leading
-  indicators, anti-metrics, and counter-metrics. Includes a Python tool that
-  renders the metric tree as a Mermaid diagram.
+  Define the North Star Metric spec: the single number, its input metric tree,
+  leading indicators, anti-metrics, and counter-metrics — with a Python tool
+  that renders it as a Mermaid diagram. Trigger on "what's our north star",
+  "define our NSM", "pick a north star metric", "input metric tree", or when
+  the user is choosing or refining the ONE headline metric. For the wider
+  dashboard system (layers, owners, cadence), use `metrics-dashboard` instead.
 license: MIT + Commons Clause
 metadata:
-  provenance: included
-  source: https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/north-star-metric
+  provenance: adapted
+  author: maitlam
+  adapted-from: https://github.com/borghei/Claude-Skills/tree/main/project-management/execution/north-star-metric
+  changes: Sharpened description to focus on the single-metric spec artifact, disambiguating from metrics-dashboard's whole-system scope.
   version: 1.0.1
-  author: borghei
   category: project-management
   domain: pm-execution
   updated: 2026-06-15

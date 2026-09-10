@@ -1,11 +1,12 @@
 ---
 name: risk-assessment
-description: Identify, assess, and mitigate operational risks. Trigger with "what are the risks", "risk assessment", "risk register", "what could go wrong", or when the user is evaluating risks associated with a project, vendor, process, or decision.
+description: Identify, assess, and mitigate ongoing operational risks — the standing risk register that lives across a program or team. Trigger with "risk register", "operational risks", "compliance risks", "vendor risk review", "process risks", or ongoing risk work. For pre-launch imagined-failure exercises, use `pre-mortem` instead.
 license: Apache-2.0
 metadata:
-  provenance: included
-  author: Anthropic
-  source: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/risk-assessment
+  provenance: adapted
+  author: maitlam
+  adapted-from: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/risk-assessment
+  changes: Sharpened description to trigger on ongoing operational risk registers, disambiguating from pre-mortem's pre-launch imagined-failure scope.
 ---
 
 # Risk Assessment

@@ -318,21 +318,9 @@
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {
-      "local": "plugins/programs/skills/program-manager",
-      "upstream": "borghei",
-      "path": "project-management/program-manager",
-      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
-    },
-    {
       "local": "plugins/programs/skills/scrum-master",
       "upstream": "borghei",
       "path": "project-management/scrum-master",
-      "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
-    },
-    {
-      "local": "plugins/programs/skills/senior-pm",
-      "upstream": "borghei",
-      "path": "project-management/senior-pm",
       "synced_sha": "ddca910e95580c63a236303fc1534054f0f14d4c"
     },
     {

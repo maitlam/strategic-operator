@@ -11,6 +11,7 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`pre-mortem`](skills/pre-mortem/SKILL.md) | Adapted | Pre-launch imagined-failure exercise: classify risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen |
 | [`agile-coach`](skills/agile-coach/SKILL.md) | Included | Expert agile coaching: framework selection, maturity assessment, retrospective facilitation, transformation roadmaps |
 | [`atlassian-admin`](skills/atlassian-admin/SKILL.md) | Included | Administer the Atlassian suite (Jira/Confluence): user provisioning, groups, SSO/SAML, permissions, security policies, marketplace apps, backups, and org-wide governance |
 | [`atlassian-templates`](skills/atlassian-templates/SKILL.md) | Included | Create, modify, and govern reusable Jira and Confluence templates, blueprints, and standardized content structures |
@@ -32,12 +33,9 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`pm-interview-prep`](skills/pm-interview-prep/SKILL.md) | Included | Structured PM interview preparation across product sense, execution, strategy, behavioral, and technical rounds, using CIRCLES, AARM, STAR, and the estimation framework |
 | [`pm-onboarding`](skills/pm-onboarding/SKILL.md) | Included | 30-60-90 day plan for a new PM joining a company or team, grounded in Michael Watkins' First 90 Days framework and the STARS situational diagnosis |
 | [`post-mortem`](skills/post-mortem/SKILL.md) | Included | Blameless post-mortem expert for incidents, outages, regressions, customer escalations, missed launches, and failed experiments |
-| [`pre-mortem`](skills/pre-mortem/SKILL.md) | Included | Pre-mortem risk analysis expert that classifies risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen |
 | [`productboard-expert`](skills/productboard-expert/SKILL.md) | Included | Productboard expert for workspace setup, Insight-to-Feature triage, Driver scoring, Releases, Roadmap views, and REST API automation |
-| [`program-manager`](skills/program-manager/SKILL.md) | Included | Program management for multi-project coordination, portfolio governance, dependency tracking, benefits realization, charters, and steering-committee reporting |
 | [`release-notes`](skills/release-notes/SKILL.md) | Included | Structured release notes that translate technical changes (tickets, changelogs, git logs, PRDs) into user-benefit communication |
 | [`scrum-master`](skills/scrum-master/SKILL.md) | Included | Data-driven Scrum Master for sprint health scoring, Monte Carlo velocity forecasting, retrospective analysis, capacity planning, and Tuckman team coaching |
-| [`senior-pm`](skills/senior-pm/SKILL.md) | Included | Senior PM for enterprise software and SaaS — portfolio management, quantitative risk analysis, prioritization, and executive reporting |
 | [`sprint-plan`](skills/sprint-plan/SKILL.md) | Included | Plan a sprint that ships — capacity, commitment vs stretch, dependencies, and risk identification that prevents mid-sprint surprises |
 | [`sprint-retrospective`](skills/sprint-retrospective/SKILL.md) | Included | Data-driven sprint retrospectives from git history — velocity, cycle/lead time, contributor insights, and churn hotspots |
 | [`stakeholder-map`](skills/stakeholder-map/SKILL.md) | Included | Map stakeholders by power × interest and design a communication plan that prevents surprise objections |

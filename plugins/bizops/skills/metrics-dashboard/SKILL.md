@@ -1,16 +1,19 @@
 ---
 name: metrics-dashboard
 description: >
-  Design a product metrics dashboard — North Star, input metrics, and
-  guardrails — that a team actually uses to make decisions. Use when
-  building dashboard architecture: layers, owners, cadence, and
-  visualization.
+  Design the whole product metrics dashboard SYSTEM: layers, owners, review
+  cadence, and visualization — the board a team actually reviews on a weekly
+  or monthly rhythm. Trigger on "design our dashboard", "metrics board
+  architecture", "dashboard layers and owners", "review cadence", or when
+  the user is building the wider dashboard rather than choosing a single
+  metric. For the North Star Metric spec itself, use `north-star-metric` first.
 license: MIT + Commons Clause
 metadata:
-  provenance: included
-  source: https://github.com/borghei/Claude-Skills/tree/main/project-management/discovery/metrics-dashboard
+  provenance: adapted
+  author: maitlam
+  adapted-from: https://github.com/borghei/Claude-Skills/tree/main/project-management/discovery/metrics-dashboard
+  changes: Sharpened description to focus on the whole dashboard system (layers, owners, cadence), disambiguating from north-star-metric's single-spec scope.
   version: 1.0.0
-  author: borghei
   category: project-management
   domain: product-discovery
   updated: 2026-05-27

@@ -1,14 +1,18 @@
 ---
 name: pre-mortem
 description: >
-  Pre-mortem risk analysis expert that classifies risks as Tigers, Paper Tigers,
-  and Elephants to surface launch-blocking issues before they happen.
+  Pre-launch imagined-failure exercise: classify risks as Tigers, Paper Tigers,
+  and Elephants to surface launch-blocking issues before they happen. Trigger on
+  "pre-mortem", "before we launch", "before we ship", "what could kill this launch",
+  "imagined failure", or Gary Klein / prospective-hindsight framing. For ongoing
+  operational risk registers, use `risk-assessment` instead.
 license: MIT + Commons Clause
 metadata:
-  provenance: included
-  source: https://github.com/borghei/Claude-Skills/tree/main/project-management/discovery/pre-mortem
+  provenance: adapted
+  author: maitlam
+  adapted-from: https://github.com/borghei/Claude-Skills/tree/main/project-management/discovery/pre-mortem
+  changes: Sharpened description to focus on pre-launch imagined-failure, disambiguating from risk-assessment's ongoing operational-register scope.
   version: 1.0.1
-  author: borghei
   category: project-management
   domain: product-discovery
   updated: 2026-06-15

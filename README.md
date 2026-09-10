@@ -19,15 +19,15 @@ Three plugins, one for each area I work in. Every skill is labeled so you can se
 <!-- catalog:start -->
 | Plugin | Focus | Skills | Original | Adapted | Included |
 |---|---|---|---|---|---|
-| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 14 | 0 | 0 | 14 |
+| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 14 | 0 | 3 | 11 |
 | [Strategy](plugins/strategy/README.md) | Decide where to play and how to win: markets, competition, business models, go-to-market, pricing, discovery, and product direction. | 27 | 0 | 0 | 27 |
-| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 36 | 0 | 0 | 36 |
+| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 34 | 0 | 1 | 33 |
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 4 | 4 | 0 | 0 |
 | [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 4 | 4 | 0 | 0 |
 | [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief. | 4 | 4 | 0 | 0 |
-| **Total** | | **89** | **12** | **0** | **77** |
+| **Total** | | **87** | **12** | **4** | **71** |
 
-Counts include 88 skills, 1 command, and 0 agents.
+Counts include 86 skills, 1 command, and 0 agents.
 
 ### My original and adapted work
 
@@ -43,6 +43,10 @@ Counts include 88 skills, 1 command, and 0 agents.
 - [`portfolio-health`](plugins/portfolio/skills/portfolio-health/SKILL.md) · Original · portfolio: Produce a whole-portfolio read — where the money and people actually are, what has stalled, what should be killed, and whether the mix matches the stated strategy
 - [`portfolio-intake`](plugins/portfolio/skills/portfolio-intake/SKILL.md) · Original · portfolio: Design or run the front door for a portfolio — how opportunities enter, what information is required before anything is evaluated, and what happens to things that don't…
 - [`resource-allocation`](plugins/portfolio/skills/resource-allocation/SKILL.md) · Original · portfolio: Match a portfolio's demands against a team's real capacity and show where it is oversubscribed, including the person-level constraints that determine dates
+- [`metrics-dashboard`](plugins/bizops/skills/metrics-dashboard/SKILL.md) · Adapted · bizops: Design the whole product metrics dashboard SYSTEM: layers, owners, review cadence, and visualization — the board a team actually reviews on a weekly or monthly rhythm
+- [`north-star-metric`](plugins/bizops/skills/north-star-metric/SKILL.md) · Adapted · bizops: Define the North Star Metric spec: the single number, its input metric tree, leading indicators, anti-metrics, and counter-metrics — with a Python tool that renders it…
+- [`risk-assessment`](plugins/bizops/skills/risk-assessment/SKILL.md) · Adapted · bizops: Identify, assess, and mitigate ongoing operational risks — the standing risk register that lives across a program or team
+- [`pre-mortem`](plugins/programs/skills/pre-mortem/SKILL.md) · Adapted · programs: Pre-launch imagined-failure exercise: classify risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen
 <!-- catalog:end -->
 
 ## How to read the labels
