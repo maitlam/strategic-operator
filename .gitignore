@@ -2,3 +2,5 @@
 .upstream-patches/
 __pycache__/
 .DS_Store
+.claude/sessions/
+.claude/settings.local.json

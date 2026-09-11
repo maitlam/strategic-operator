@@ -189,13 +189,32 @@ Research agents restrict tools to `WebSearch, WebFetch, Read, Grep, Glob` (no Ed
 
 ## Automations
 
-User-invoked slash commands. Deterministic — same input, same execution, every time.
+Two flavors of automation live in this repo: **slash commands** (user-invoked) and **hooks** (event-triggered).
+
+### Slash commands
+
+Deterministic — same input, same execution, every time.
 
 | Command | Plugin | What it does |
 |---|---|---|
 | [`/discovery:brainstorm`](plugins/discovery/commands/brainstorm.md) | discovery | Brainstorm a product idea, problem space, or strategic question with a sharp thinking partner (borrowed from Anthropic's plugins) |
 
-**Not yet configured:** hooks (event-triggered scripts in `settings.json`) and MCP servers. Adding those is on the roadmap when a specific need surfaces.
+### Hooks
+
+Configured in [`.claude/settings.json`](.claude/settings.json), triggered by Claude Code on specific events. Repo-scoped — anyone opening this repo in Claude Code gets them.
+
+| Event | Hook | What it does |
+|---|---|---|
+| `PostToolUse` (Edit / Write) | [`refresh-catalog.sh`](.claude/hooks/refresh-catalog.sh) | Auto-runs `scripts/catalog.py` whenever a plugin file (SKILL.md, agent, or command) is edited — the catalog and READMEs never drift. Silent on success; warns on missing PyYAML. |
+| `UserPromptSubmit` | [`log-prompt.sh`](.claude/hooks/log-prompt.sh) | Appends every user prompt to `.claude/sessions/YYYY-MM-DD.md` — a running log of what you asked Claude, per day. Session logs are gitignored (personal record, not shared). |
+
+**Requirements.** The catalog-refresh hook expects `python3` with PyYAML on your PATH. `pip install pyyaml` (or the equivalent for your environment) once, and it works forever.
+
+**Opt out of any hook** by editing `.claude/settings.json` or overriding with a `.claude/settings.local.json` (gitignored).
+
+### MCP servers
+
+Not yet configured. Some of the borrowed skills gesture at MCP integrations in their CONNECTORS.md — Slack, Notion, Jira, Confluence, Linear — but I haven't installed and documented these yet. That's the next automation layer.
 
 ---
 
