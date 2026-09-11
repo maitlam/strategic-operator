@@ -1,20 +1,122 @@
 # Strategic Operator
 
-Open-source Claude skills for Biz Ops, Strategy, and Program Management.
+Open-source Claude skills, subagents, and automations for Biz Ops, Strategy, and Program Management.
 
 [![Validate](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml/badge.svg)](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml)
 
-## Why I built this
-
 The best way I know to learn something is to build it. So as I dig into agentic Biz Ops and Program Management, that's exactly what I'm doing, one skill at a time.
 
-Early on, I stumbled on two generous open-source collections: Anthropic's [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) and Amin Borghei's [Claude-Skills](https://github.com/borghei/Claude-Skills). Rather than start from a blank page, I used them as my baseline and my guide. From there, I'm applying my own knowledge and experience: tweaking skills to fit how strategic ops work actually gets done, and building new skills and agents where I see gaps. Huge thanks to both for sharing their work in the open.
+Early on, I stumbled on two generous open-source collections: Anthropic's [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) and Amin Borghei's [Claude-Skills](https://github.com/borghei/Claude-Skills). Rather than start from a blank page, I used them as my baseline and my guide. From there, I'm applying my own knowledge and experience: tweaking skills to fit how strategic ops work actually gets done, and building new skills and agents where I see gaps.
 
-This repo is part learning project, part working Strategic Ops toolkit, and part reference architecture for anyone curious about agentic workflows. If you're a chief of staff or strategic generalist exploring how AI agents fit into your workflow, clone this and experiment. If you're building your own skill system, steal whatever's useful. Just keep the original authors' license notes with anything you take.
+This repo is part learning project, part working Strategic Ops toolkit, and part reference architecture for anyone curious about agentic workflows. If you're a chief of staff or strategic generalist exploring how AI agents fit into your workflow, clone this and experiment. If you're building your own skill system, steal whatever's useful.
 
-## What's inside
+---
 
-Three plugins, one for each area I work in. Every skill is labeled so you can see exactly what I wrote, what I adapted, and what I brought in from others.
+## Quick Start
+
+**Install (Claude Code).**
+
+```bash
+claude plugin marketplace add maitlam/strategic-operator
+claude plugin install bizops@strategic-operator
+claude plugin install programs@strategic-operator
+claude plugin install operating-model@strategic-operator
+claude plugin install portfolio@strategic-operator
+claude plugin install intelligence@strategic-operator
+claude plugin install discovery@strategic-operator
+claude plugin install positioning@strategic-operator
+claude plugin install product-planning@strategic-operator
+```
+
+**Claude Cowork.** Add `maitlam/strategic-operator` as a marketplace from the plugins directory.
+
+**Try it.** Skills activate on their own when you describe what you need — no invocation ceremony. Try:
+
+```
+Help me define a north star metric for [your product].
+Map the ecosystem for [an unfamiliar market].
+Draft a positioning brief for [our team].
+Review this PRD I've written.
+```
+
+Prefer explicit invocation? Every skill is directly callable — `/discovery:jtbd-workshop`, `/portfolio:opportunity-scoring`, `/positioning:positioning-brief`.
+
+**Connectors are optional.** Some skills can pull from Slack, Notion, or Jira if you've connected them (each plugin's `CONNECTORS.md` explains how). Every skill also works if you just paste in the context.
+
+---
+
+## Architecture
+
+Three extension types, each earning its place for a different problem shape.
+
+### Skills — atomic capabilities
+
+The unit of work. A markdown file (`SKILL.md`) with frontmatter declaring what it does and when to trigger, and a body describing the method. Skills auto-fire when Claude matches an intent against the description.
+
+Use skills for **one bounded job** — draft an OKR, score an opportunity, synthesize interviews.
+
+Location: `plugins/<plugin>/skills/<skill-name>/SKILL.md`
+
+### Subagents — persona-driven workflows
+
+Delegated Claude sub-instances with a system prompt, tool restrictions, and a focused role. Claude routes to them when a task fits their scope.
+
+Use subagents for **multi-step work with a distinct voice** — heavy web research (context isolation), a chained workflow (portfolio review across four skills), or an opinionated persona (a critic vs. an author).
+
+Location: `plugins/<plugin>/agents/<agent-name>.md`
+
+### Automations — user-invoked shortcuts
+
+Commands the user calls explicitly (`/plugin:command`). Unlike skills, no matching ambiguity — the command runs the exact template every time.
+
+Use automations for **recurring rituals** — the Monday morning beat, the Friday status, the pre-launch sweep.
+
+Location: `plugins/<plugin>/commands/<command>.md`
+
+### How they compose
+
+```
+   Skills ──► atomic jobs (one job per skill)
+     ▲
+     │
+     │ invoked by
+     │
+   Subagents ──► multi-step workflows with a voice
+     ▲
+     │
+     │ optionally kicked off by
+     │
+   Automations ──► explicit, deterministic entry points
+```
+
+A user request usually enters via **description matching a skill** or **describing intent that routes to a subagent**. Automations are the shortcut layer on top — nothing is done that couldn't be reached by describing intent, but muscle memory works faster.
+
+### Repo layout
+
+```
+strategic-operator/
+├── .claude-plugin/marketplace.json   # the marketplace: lists the eight plugins
+├── plugins/
+│   ├── bizops/                       # each plugin has the same shape:
+│   ├── programs/                     #   .claude-plugin/plugin.json  manifest
+│   ├── operating-model/              #   skills/<name>/SKILL.md      one folder per skill
+│   ├── portfolio/                    #   agents/<name>.md            one file per agent
+│   ├── intelligence/                 #   commands/<name>.md          one file per command
+│   ├── discovery/                    #   README.md, CONNECTORS.md, LICENSES/
+│   ├── positioning/
+│   └── product-planning/
+├── templates/                        # starting points for original and adapted skills
+├── scripts/
+│   ├── catalog.py                    # builds the catalog, checks labels, removes skills
+│   └── check_upstream.py             # tracks and pulls upstream changes
+├── sources.json                      # where every borrowed item came from
+├── docs/skill-review.md              # curation checklist: overlaps and fit questions
+└── .github/workflows/validate.yml    # runs the checks on every push
+```
+
+---
+
+## Skill Reference
 
 <!-- catalog:start -->
 | Plugin | Focus | Skills | Original | Adapted | Included |
@@ -62,39 +164,77 @@ Counts include 89 skills, 1 command, and 8 agents.
 - [`pre-mortem`](plugins/programs/skills/pre-mortem/SKILL.md) · Adapted · programs: Pre-launch imagined-failure exercise: classify risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen
 <!-- catalog:end -->
 
-## How to read the labels
+Everything above is auto-generated from each item's frontmatter by `scripts/catalog.py`. The counts can't drift out of date — a GitHub Action re-runs the check on every push.
 
-**Original** skills are ones I wrote from scratch.
+---
 
-**Adapted** skills started from someone else's work and were meaningfully reshaped. Each has a `CHANGES.md` in its folder explaining what I changed and why.
+## Subagents
 
-**Included** skills are someone else's work, brought in as-is and credited because they round out the toolkit. The only edit is the provenance label in their frontmatter.
+Eight agents wrap the multi-step workflows and personas. Skills are what agents call.
 
-The labels live in each skill's frontmatter (`metadata.provenance`), and the catalog above is generated from them, so it can't drift out of date. A GitHub Action checks every push: every item must be labeled, adapted and included work must link back to its source, and the catalog must match the files.
+| Agent | Plugin | Wraps | Job |
+|---|---|---|---|
+| [partner-intelligence](plugins/intelligence/agents/partner-intelligence.md) | intelligence | ecosystem-map, partner-scan, competitive-intel | Named-company research; ends in a discovery list, not a verdict |
+| [market-landscape-analyzer](plugins/intelligence/agents/market-landscape-analyzer.md) | intelligence | ecosystem-map + others | Whole-market mapping; ecosystem is the deliverable |
+| [product-discovery-researcher](plugins/discovery/agents/product-discovery-researcher.md) | discovery | customer-interview-script, interview-synthesis, jtbd-workshop, brainstorm-ideas | Customer-side research cycle — behavior over opinion, jobs not personas |
+| [operating-model-designer](plugins/operating-model/agents/operating-model-designer.md) | operating-model | operating-model-builder, decision-rights, governance-design, okr-tracking | Zero-to-one team design; anti-ceremony, authority explicit |
+| [decision-memo](plugins/operating-model/agents/decision-memo.md) | operating-model | decision-rights + novel content | Options-first decision packets; reversibility framing (T1/T2 doors) |
+| [portfolio-manager](plugins/portfolio/agents/portfolio-manager.md) | portfolio | portfolio-health, resource-allocation, dependency-map, risk-assessment | Active-work tracking; kill discipline, no watermelon status |
+| [portfolio-prioritizer](plugins/portfolio/agents/portfolio-prioritizer.md) | portfolio | portfolio-intake, opportunity-scoring | Pipeline scoring; criteria declared before scoring, invest/pause/kill/investigate |
+| [launch-readiness](plugins/programs/agents/launch-readiness.md) | programs | launch-playbook, dependency-map, risk-assessment, pre-mortem | Cross-team readiness sweep with a defensible GO / CONDITIONAL GO / NO-GO |
 
-## Try it
+Research agents restrict tools to `WebSearch, WebFetch, Read, Grep, Glob` (no Edit/Write). Orchestrators restrict to `Read, Grep, Glob`. Launch-readiness adds `WebFetch` for Confluence/Notion pulls.
 
-**Browse.** Every skill is a readable markdown file. Start with a plugin README ([Biz Ops](plugins/bizops/README.md), [Programs](plugins/programs/README.md), [Operating Model](plugins/operating-model/README.md), [Portfolio](plugins/portfolio/README.md), [Intelligence](plugins/intelligence/README.md), [Discovery](plugins/discovery/README.md), [Positioning](plugins/positioning/README.md), [Product Planning](plugins/product-planning/README.md)) and open whatever catches your eye.
+---
 
-**Claude Code.**
+## Automations
+
+User-invoked slash commands. Deterministic — same input, same execution, every time.
+
+| Command | Plugin | What it does |
+|---|---|---|
+| [`/discovery:brainstorm`](plugins/discovery/commands/brainstorm.md) | discovery | Brainstorm a product idea, problem space, or strategic question with a sharp thinking partner (borrowed from Anthropic's plugins) |
+
+**Not yet configured:** hooks (event-triggered scripts in `settings.json`) and MCP servers. Adding those is on the roadmap when a specific need surfaces.
+
+---
+
+## Sources & Attribution
+
+### Provenance conventions
+
+Every skill, agent, and command is labeled with one of three provenance types:
+
+- **Original** — I wrote it from scratch. Author: `maitlam`.
+- **Adapted** — Started from someone else's work and meaningfully reshaped. Each has a `CHANGES.md` explaining what changed and why. `metadata.adapted-from` points to the source.
+- **Included** — Someone else's work, brought in as-is and credited. `metadata.source` points to the upstream file. The only edit is the provenance label in the frontmatter.
+
+Labels live in each item's frontmatter (`metadata.provenance`). The catalog above is generated from them, so it can't drift out of date. CI enforces every item to be labeled and every non-original item to link back to its upstream source.
+
+### Upstream sources
+
+Borrowed work keeps its original license, noted in each item's frontmatter:
+
+- **Anthropic** · [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) · Apache License 2.0
+- **Amin Borghei** · [Claude-Skills](https://github.com/borghei/Claude-Skills) · MIT + Commons Clause — use, modify, share; do not sell.
+
+Full license texts are in each plugin's `LICENSES/` folder. [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) describes exactly what changed from the originals.
+
+My original work is released under the [MIT License](LICENSE).
+
+### Keeping in sync with upstream
+
+Nothing here is a fork, so upstream changes never arrive automatically and nothing flows back. [`sources.json`](sources.json) records the exact upstream commit each borrowed item came from.
 
 ```bash
-claude plugin marketplace add maitlam/strategic-operator
-claude plugin install bizops@strategic-operator
-claude plugin install programs@strategic-operator
-claude plugin install operating-model@strategic-operator
-claude plugin install portfolio@strategic-operator
-claude plugin install intelligence@strategic-operator
-claude plugin install discovery@strategic-operator
-claude plugin install positioning@strategic-operator
-claude plugin install product-planning@strategic-operator
+python3 scripts/check_upstream.py                      # what changed upstream since I copied?
+python3 scripts/check_upstream.py --diff pre-mortem    # see the changes for one item
+python3 scripts/check_upstream.py --merge pre-mortem   # merge them in (or --merge all)
 ```
 
-Skills activate on their own when a request matches, or you can call one directly, like `/programs:dependency-map`.
+Merging is three-way: it compares upstream's old version, upstream's new version, and my copy — my edits and provenance labels are preserved. If upstream changed the same lines I did, the file gets standard `<<<<<<<` conflict markers to resolve; nothing is marked synced until I do.
 
-**Claude Cowork.** Add `maitlam/strategic-operator` as a marketplace from the plugins directory.
-
-**Connectors are optional.** Some skills can pull from tools like Slack, Notion, or Jira if you've connected them, and each plugin's `CONNECTORS.md` explains how. Every skill also works if you just paste in the context.
+---
 
 ## Build on it
 
@@ -117,49 +257,3 @@ python3 scripts/catalog.py --remove pm-interview-prep
 ```
 
 **Before you push:** `python3 scripts/catalog.py --check`. CI runs the same check, plus Claude Code's own plugin validator.
-
-## Staying in sync with upstream
-
-Nothing here is a fork, so upstream changes never arrive automatically, and nothing flows back. `sources.json` records the exact upstream commit each borrowed item came from.
-
-```bash
-python3 scripts/check_upstream.py                      # what changed upstream since I copied?
-python3 scripts/check_upstream.py --diff pre-mortem    # see the changes for one item
-python3 scripts/check_upstream.py --merge pre-mortem   # merge them in (or --merge all)
-```
-
-Merging is three-way: it compares upstream's old version, upstream's new version, and my copy, so my edits and provenance labels are kept. If upstream changed the same lines I did, the file gets standard `<<<<<<<` conflict markers for me to resolve, and nothing is marked synced until I do. Review with `git diff` before committing.
-
-## How it's organized
-
-```
-strategic-operator/
-├── .claude-plugin/marketplace.json   # the marketplace: lists the eight plugins
-├── plugins/
-│   ├── bizops/                       # each plugin has the same shape:
-│   ├── programs/                     #   .claude-plugin/plugin.json  manifest
-│   ├── operating-model/              #   skills/<name>/SKILL.md      one folder per skill
-│   ├── portfolio/                    #   agents/<name>.md            one file per agent
-│   ├── intelligence/                 #   README.md, CONNECTORS.md, LICENSES/
-│   ├── discovery/
-│   ├── positioning/
-│   └── product-planning/
-├── templates/                        # starting points for original and adapted skills
-├── scripts/
-│   ├── catalog.py                    # builds the catalog, checks labels, removes skills
-│   └── check_upstream.py             # tracks and pulls upstream changes
-├── sources.json                      # where every borrowed item came from
-├── docs/skill-review.md              # curation checklist: overlaps and fit questions
-└── .github/workflows/validate.yml    # runs the checks on every push
-```
-
-## Credits and licenses
-
-My original work is released under the [MIT License](LICENSE).
-
-Borrowed work keeps its original license, noted in each skill's frontmatter:
-
-- **Anthropic** · [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) · Apache License 2.0
-- **Amin Borghei** · [Claude-Skills](https://github.com/borghei/Claude-Skills) · MIT + Commons Clause. You can use, modify, and share these skills, but not sell them or a paid product built substantially on them.
-
-Full license texts are in each plugin's `LICENSES/` folder, and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) describes exactly what was changed from the originals.
