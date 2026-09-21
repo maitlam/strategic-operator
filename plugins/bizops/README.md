@@ -11,6 +11,7 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`/meeting-prep`](commands/meeting-prep.md) (command) | Original | Prep for a meeting — its purpose and the decision it needs, open items from last time, who's in the room and what they care about, the questions to ask, and a time-boxed… |
 | [`metrics-dashboard`](skills/metrics-dashboard/SKILL.md) | Adapted | Design the whole product metrics dashboard SYSTEM: layers, owners, review cadence, and visualization — the board a team actually reviews on a weekly or monthly rhythm |
 | [`north-star-metric`](skills/north-star-metric/SKILL.md) | Adapted | Define the North Star Metric spec: the single number, its input metric tree, leading indicators, anti-metrics, and counter-metrics — with a Python tool that renders it… |
 | [`risk-assessment`](skills/risk-assessment/SKILL.md) | Adapted | Identify, assess, and mitigate ongoing operational risks — the standing risk register that lives across a program or team |
@@ -26,3 +27,21 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`team-communications`](skills/team-communications/SKILL.md) | Included | Design a delivery team's communication system — channel routing, meeting-load reduction, status structure, escalation SLAs, timezone norms |
 | [`vendor-review`](skills/vendor-review/SKILL.md) | Included | Evaluate a vendor — cost analysis, risk assessment, and recommendation |
 <!-- catalog:end -->
+
+## Hooks
+
+Ships two hooks. Both are active for anyone who installs this plugin; silence either with an env var rather than uninstalling.
+
+| Event | Script | What it does | Off switch |
+|---|---|---|---|
+| `PostToolUse` (Write / Edit) | [`note-actions.sh`](hooks/note-actions.sh) | When a markdown file lands in the notes directory, asks Claude to run `meeting-analyzer` on it and present decisions, actions, and open questions **for your confirmation** before anything is appended to the register. The hook itself extracts and writes nothing. | `SO_NOTE_ACTIONS=off` |
+| `PostToolUse` (Write / Edit) | [`refresh-status.sh`](hooks/refresh-status.sh) → [`refresh_status.py`](hooks/refresh_status.py) | When the action register changes, recounts it — open, overdue, due within 7 days, undated, unowned, open-by-owner — and rewrites the status block at the top of the file. Deterministic, no model involved, idempotent. | `SO_REFRESH_STATUS=off` |
+
+Paths, relative to the project root (override with env vars):
+
+| Env var | Default | Meaning |
+|---|---|---|
+| `SO_NOTES_DIR` | `meetings/` | Where processed meeting notes land |
+| `SO_ACTION_REGISTER` | `actions.md` | The action register `meeting-analyzer` appends to |
+
+**Register format.** `refresh-status` finds the first markdown table with `Owner`, `Due`, and `Status` columns (any order). Status values `done`, `closed`, `complete`, `cancelled` count as closed; everything else is open. Due dates are `YYYY-MM-DD`. The status block sits between `<!-- status:start -->` and `<!-- status:end -->` and is inserted after the first heading if missing.

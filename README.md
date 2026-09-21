@@ -102,8 +102,8 @@ strategic-operator/
 │   ├── operating-model/              #   skills/<name>/SKILL.md      one folder per skill
 │   ├── portfolio/                    #   agents/<name>.md            one file per agent
 │   ├── intelligence/                 #   commands/<name>.md          one file per command
-│   ├── discovery/                    #   README.md, CONNECTORS.md, LICENSES/
-│   ├── positioning/
+│   ├── discovery/                    #   hooks/hooks.json + *.sh     event-triggered, ship with the plugin
+│   ├── positioning/                  #   README.md, CONNECTORS.md, LICENSES/
 │   └── product-planning/
 ├── templates/                        # starting points for original and adapted skills
 ├── scripts/
@@ -121,28 +121,36 @@ strategic-operator/
 <!-- catalog:start -->
 | Plugin | Focus | Skills | Original | Adapted | Included |
 |---|---|---|---|---|---|
-| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 14 | 0 | 3 | 11 |
-| [Discovery](plugins/discovery/README.md) | Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise. | 12 | 2 | 0 | 10 |
+| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 15 | 1 | 3 | 11 |
+| [Discovery](plugins/discovery/README.md) | Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise. | 13 | 3 | 0 | 10 |
 | [Positioning](plugins/positioning/README.md) | Decide where to play and how to win: market frameworks (Porter's, SWOT, Ansoff), business-model canvases, ICP, and go-to-market strategy. | 9 | 1 | 0 | 8 |
 | [Product Planning](plugins/product-planning/README.md) | Turn strategy into product direction: PRDs, product vision, prioritization frameworks, and outcome-driven roadmaps. | 10 | 1 | 0 | 9 |
-| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 35 | 1 | 1 | 33 |
+| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 38 | 4 | 1 | 33 |
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 6 | 6 | 0 | 0 |
 | [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 6 | 6 | 0 | 0 |
-| [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief. | 6 | 6 | 0 | 0 |
-| **Total** | | **98** | **23** | **4** | **71** |
+| [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: map and size a market, run the loop from signal to research to pattern, and read specific partners and competitors. | 12 | 12 | 0 | 0 |
+| **Total** | | **109** | **34** | **4** | **71** |
 
-Counts include 89 skills, 1 command, and 8 agents.
+Counts include 94 skills, 6 commands, and 9 agents.
 
 ### My original and adapted work
 
+- [`/meeting-prep`](plugins/bizops/commands/meeting-prep.md) (command) · Original · bizops: Prep for a meeting — its purpose and the decision it needs, open items from last time, who's in the room and what they care about, the questions to ask, and a time-boxed…
 - [`discovery-cadence`](plugins/discovery/skills/discovery-cadence/SKILL.md) · Original · discovery: Design or diagnose the operating rhythm of continuous customer discovery — the weekly beat that produces learning, not the one-off "round of interviews" that produces a…
+- [`/feedback-weekly`](plugins/discovery/commands/feedback-weekly.md) (command) · Original · discovery: Weekly customer-feedback analysis — gather the week's inbound from every channel, triage and deduplicate it, count independent sources per theme, show what moved since…
 - [`product-discovery-researcher`](plugins/discovery/agents/product-discovery-researcher.md) (agent) · Original · discovery: Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence
 - [`competitive-intel`](plugins/intelligence/skills/competitive-intel/SKILL.md) · Original · intelligence: Build a read on a competitor — what they're actually doing versus what they say, where they're strong, where they're exposed, and what their recent moves imply about…
 - [`ecosystem-map`](plugins/intelligence/skills/ecosystem-map/SKILL.md) · Original · intelligence: Segment an unfamiliar market or ecosystem into its structural parts — who the actors are, how value and money move between them, and where the pain concentrates
 - [`intelligence-brief`](plugins/intelligence/skills/intelligence-brief/SKILL.md) · Original · intelligence: Produce a recurring market intelligence brief — daily or weekly signals filtered for what actually matters to this team, with the "so what" attached
+- [`lens-researcher`](plugins/intelligence/agents/lens-researcher.md) (agent) · Original · intelligence: Research one lens of a larger topic — money, operations, players and moves, technology, evidence, or constraints — against a short list of sub-questions, writing sourced…
 - [`market-landscape-analyzer`](plugins/intelligence/agents/market-landscape-analyzer.md) (agent) · Original · intelligence: Map an unfamiliar market, space, vertical, or ecosystem — segment the actors, trace value and money flow, identify pain concentration, and flag white space
+- [`market-sizing`](plugins/intelligence/skills/market-sizing/SKILL.md) · Original · intelligence: Size a market with a defensible range rather than a single number — TAM, SAM, and SOM built bottom-up and top-down, reconciled, with every assumption visible and the one…
 - [`partner-intelligence`](plugins/intelligence/agents/partner-intelligence.md) (agent) · Original · intelligence: Research and profile a named company or organization as a potential partner, vendor, channel, or acquirer target
 - [`partner-scan`](plugins/intelligence/skills/partner-scan/SKILL.md) · Original · intelligence: Profile a specific company as a potential partner — what they do, who they serve, how they make money, what they'd want from a partnership, and what would have to be…
+- [`pattern-analysis`](plugins/intelligence/skills/pattern-analysis/SKILL.md) · Original · intelligence: Read across a whole corpus of conversations — meeting notes, interviews, customer calls, briefs — and report what recurs, what conflicts, what is newly emerging, and how…
+- [`research-agenda`](plugins/intelligence/skills/research-agenda/SKILL.md) · Original · intelligence: Turn a pile of open questions, graduated signals, and untested assumptions into a prioritized research roadmap — each item framed by the decision it feeds and what…
+- [`research-brief`](plugins/intelligence/skills/research-brief/SKILL.md) · Original · intelligence: Produce a deep, sourced research brief on a single topic — scope confirmed first, the topic decomposed into lenses so coverage is systematic, every fact sourced and…
+- [`signal-scan`](plugins/intelligence/skills/signal-scan/SKILL.md) · Original · intelligence: Sweep the team's own recent conversations — meeting notes, customer calls, interviews, internal briefs — for research signals, deduplicate them against a running signal…
 - [`decision-memo`](plugins/operating-model/agents/decision-memo.md) (agent) · Original · operating-model: Turn evidence, options, and stakeholder input into a structured decision memo — context, options, tradeoffs, recommendation, risks, and a clear decision request
 - [`decision-rights`](plugins/operating-model/skills/decision-rights/SKILL.md) · Original · operating-model: Map who decides what on a team or program — the authority to approve, to break a tie, to spend, and to stop — and surface where that authority is currently undefined
 - [`governance-design`](plugins/operating-model/skills/governance-design/SKILL.md) · Original · operating-model: Design the review and forum layer for a team or portfolio — which recurring meetings exist, what each one decides, what artifact it requires as input, and which existing…
@@ -158,6 +166,9 @@ Counts include 89 skills, 1 command, and 8 agents.
 - [`positioning-brief`](plugins/positioning/skills/positioning-brief/SKILL.md) · Original · positioning: Write or stress-test a one-page positioning brief — who we're for, what we do, why it's different, what we deliberately are not
 - [`prd-quality-gate`](plugins/product-planning/skills/prd-quality-gate/SKILL.md) · Original · product-planning: Review a draft PRD against a short quality checklist before it goes to a stakeholder — is a decision actually being requested, is success measurable, are assumptions…
 - [`launch-readiness`](plugins/programs/agents/launch-readiness.md) (agent) · Original · programs: Evaluate readiness across cross-functional teams before a launch — Product, Engineering, Legal/Privacy, Security, Operations, GTM, Support — and surface blockers,…
+- [`/retro`](plugins/programs/commands/retro.md) (command) · Original · programs: Run a sprint or milestone retrospective — data first, then the team's read, then one to three owned actions — and file the durable lessons somewhere they'll be read again
+- [`/sprint-kickoff`](plugins/programs/commands/sprint-kickoff.md) (command) · Original · programs: Run the sprint kickoff — real capacity, a readiness check on candidate stories, a commit-versus-stretch split, dependencies and risks named, and a one-sentence sprint…
+- [`/standup`](plugins/programs/commands/standup.md) (command) · Original · programs: Prep the daily standup — what moved since yesterday, what's aging, what's blocked, and the one or two things the standup actually needs to decide
 - [`metrics-dashboard`](plugins/bizops/skills/metrics-dashboard/SKILL.md) · Adapted · bizops: Design the whole product metrics dashboard SYSTEM: layers, owners, review cadence, and visualization — the board a team actually reviews on a weekly or monthly rhythm
 - [`north-star-metric`](plugins/bizops/skills/north-star-metric/SKILL.md) · Adapted · bizops: Define the North Star Metric spec: the single number, its input metric tree, leading indicators, anti-metrics, and counter-metrics — with a Python tool that renders it…
 - [`risk-assessment`](plugins/bizops/skills/risk-assessment/SKILL.md) · Adapted · bizops: Identify, assess, and mitigate ongoing operational risks — the standing risk register that lives across a program or team
@@ -170,12 +181,13 @@ Everything above is auto-generated from each item's frontmatter by `scripts/cata
 
 ## Subagents
 
-Eight agents wrap the multi-step workflows and personas. Skills are what agents call.
+Nine agents wrap the multi-step workflows and personas. Skills are what agents call.
 
 | Agent | Plugin | Wraps | Job |
 |---|---|---|---|
 | [partner-intelligence](plugins/intelligence/agents/partner-intelligence.md) | intelligence | ecosystem-map, partner-scan, competitive-intel | Named-company research; ends in a discovery list, not a verdict |
 | [market-landscape-analyzer](plugins/intelligence/agents/market-landscape-analyzer.md) | intelligence | ecosystem-map + others | Whole-market mapping; ecosystem is the deliverable |
+| [lens-researcher](plugins/intelligence/agents/lens-researcher.md) | intelligence | research-brief (one lens per instance) | Parallel per-lens research with write-as-you-go findings and stuck-detection |
 | [product-discovery-researcher](plugins/discovery/agents/product-discovery-researcher.md) | discovery | customer-interview-script, interview-synthesis, jtbd-workshop, brainstorm-ideas | Customer-side research cycle — behavior over opinion, jobs not personas |
 | [operating-model-designer](plugins/operating-model/agents/operating-model-designer.md) | operating-model | operating-model-builder, decision-rights, governance-design, okr-tracking | Zero-to-one team design; anti-ceremony, authority explicit |
 | [decision-memo](plugins/operating-model/agents/decision-memo.md) | operating-model | decision-rights + novel content | Options-first decision packets; reversibility framing (T1/T2 doors) |
@@ -183,7 +195,7 @@ Eight agents wrap the multi-step workflows and personas. Skills are what agents 
 | [portfolio-prioritizer](plugins/portfolio/agents/portfolio-prioritizer.md) | portfolio | portfolio-intake, opportunity-scoring | Pipeline scoring; criteria declared before scoring, invest/pause/kill/investigate |
 | [launch-readiness](plugins/programs/agents/launch-readiness.md) | programs | launch-playbook, dependency-map, risk-assessment, pre-mortem | Cross-team readiness sweep with a defensible GO / CONDITIONAL GO / NO-GO |
 
-Research agents restrict tools to `WebSearch, WebFetch, Read, Grep, Glob` (no Edit/Write). Orchestrators restrict to `Read, Grep, Glob`. Launch-readiness adds `WebFetch` for Confluence/Notion pulls.
+Research agents restrict tools to `WebSearch, WebFetch, Read, Grep, Glob` (no Edit/Write); lens-researcher adds `Write` for its append-only findings file. Orchestrators restrict to `Read, Grep, Glob`. Launch-readiness adds `WebFetch` for Confluence/Notion pulls.
 
 ---
 
@@ -198,19 +210,42 @@ Deterministic — same input, same execution, every time.
 | Command | Plugin | What it does |
 |---|---|---|
 | [`/discovery:brainstorm`](plugins/discovery/commands/brainstorm.md) | discovery | Brainstorm a product idea, problem space, or strategic question with a sharp thinking partner (borrowed from Anthropic's plugins) |
+| [`/programs:standup`](plugins/programs/commands/standup.md) | programs | Daily standup prep — delta since yesterday, aging work, blocked items, and the one or two decisions the standup needs |
+| [`/programs:sprint-kickoff`](plugins/programs/commands/sprint-kickoff.md) | programs | Sprint kickoff — measured capacity, readiness check, commit vs stretch, dependencies, one-sentence goal, meeting agenda |
+| [`/programs:retro`](plugins/programs/commands/retro.md) | programs | Retrospective — follow-through check, data first, ≤3 owned actions, durable lessons filed separately; `--incident` routes to post-mortem |
+| [`/bizops:meeting-prep`](plugins/bizops/commands/meeting-prep.md) | bizops | Meeting prep — purpose and decision sought, open items from last time, the room, questions, time-boxed agenda; or a recommendation to cancel |
+| [`/discovery:feedback-weekly`](plugins/discovery/commands/feedback-weekly.md) | discovery | Weekly customer-feedback digest — triage, independent-source counts per theme, trend vs last week, routing to roadmap / bug / research |
 
 ### Hooks
 
-Configured in [`.claude/settings.json`](.claude/settings.json), triggered by Claude Code on specific events. Repo-scoped — anyone opening this repo in Claude Code gets them.
+Event-triggered — they fire *because something happened*, not on a schedule. Two scopes:
+
+| | Lives in | Fires for |
+|---|---|---|
+| **Plugin hooks** | `plugins/<plugin>/hooks/hooks.json` + scripts | anyone who installs that plugin |
+| **Repo hooks** | [`.claude/settings.json`](.claude/settings.json) + [`.claude/hooks/`](.claude/hooks/) | anyone working inside this repo |
+
+**Plugin hooks** ship with the plugin. A hook can't reason — it detects an event and either does something deterministic (recount a table) or injects an instruction so Claude does the reasoning in the same turn. Anything that writes on Claude's behalf asks first.
+
+| Event | Plugin | Hook | What it does | Off switch |
+|---|---|---|---|---|
+| `SessionStart` | programs | [`standup-nudge.sh`](plugins/programs/hooks/standup-nudge.sh) | Sprint plan present and no standup prep today → one-line reminder to run `/programs:standup` | `SO_STANDUP_NUDGE=off` |
+| `PostToolUse` (Write/Edit) | bizops | [`note-actions.sh`](plugins/bizops/hooks/note-actions.sh) | A note landed in the notes folder → run `meeting-analyzer`, present decisions and actions **for confirmation**, then append to the register | `SO_NOTE_ACTIONS=off` |
+| `PostToolUse` (Write/Edit) | bizops | [`refresh-status.sh`](plugins/bizops/hooks/refresh-status.sh) | The action register changed → recount open / overdue / due-soon / by-owner and rewrite the status block. Deterministic, idempotent. | `SO_REFRESH_STATUS=off` |
+| `PostToolUse` (Write/Edit) | intelligence | [`note-signals.sh`](plugins/intelligence/hooks/note-signals.sh) | A note landed in the notes folder → run `signal-scan` on it, show candidates **for confirmation**, then update the signal log | `SO_NOTE_SIGNALS=off` |
+
+Paths are conventions with env-var overrides — `SO_NOTES_DIR` (`meetings/`), `SO_ACTION_REGISTER` (`actions.md`), `SO_SIGNAL_LOG` (`signal-log.md`), `SO_SPRINT_PLAN` (`sprint.md`), `SO_STANDUP_DIR` (`standups/`). Each plugin's README documents the ones it uses.
+
+**Repo hooks** are for maintaining this repo itself.
 
 | Event | Hook | What it does |
 |---|---|---|
 | `PostToolUse` (Edit / Write) | [`refresh-catalog.sh`](.claude/hooks/refresh-catalog.sh) | Auto-runs `scripts/catalog.py` whenever a plugin file (SKILL.md, agent, or command) is edited — the catalog and READMEs never drift. Silent on success; warns on missing PyYAML. |
 | `UserPromptSubmit` | [`log-prompt.sh`](.claude/hooks/log-prompt.sh) | Appends every user prompt to `.claude/sessions/YYYY-MM-DD.md` — a running log of what you asked Claude, per day. Session logs are gitignored (personal record, not shared). |
 
-**Requirements.** The catalog-refresh hook expects `python3` with PyYAML on your PATH. `pip install pyyaml` (or the equivalent for your environment) once, and it works forever.
+**Requirements.** All hooks need `python3` on your PATH. The catalog-refresh hook also expects PyYAML. `pip install pyyaml` (or the equivalent for your environment) once, and it works forever.
 
-**Opt out of any hook** by editing `.claude/settings.json` or overriding with a `.claude/settings.local.json` (gitignored).
+**Opt out.** Plugin hooks: set the env var shown in the table. Repo hooks: edit `.claude/settings.json` or override with a `.claude/settings.local.json` (gitignored).
 
 ### MCP servers
 

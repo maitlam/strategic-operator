@@ -12,6 +12,9 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | Skill | Type | What it does |
 |---|---|---|
 | [`launch-readiness`](agents/launch-readiness.md) (agent) | Original | Evaluate readiness across cross-functional teams before a launch — Product, Engineering, Legal/Privacy, Security, Operations, GTM, Support — and surface blockers,… |
+| [`/retro`](commands/retro.md) (command) | Original | Run a sprint or milestone retrospective — data first, then the team's read, then one to three owned actions — and file the durable lessons somewhere they'll be read again |
+| [`/sprint-kickoff`](commands/sprint-kickoff.md) (command) | Original | Run the sprint kickoff — real capacity, a readiness check on candidate stories, a commit-versus-stretch split, dependencies and risks named, and a one-sentence sprint… |
+| [`/standup`](commands/standup.md) (command) | Original | Prep the daily standup — what moved since yesterday, what's aging, what's blocked, and the one or two things the standup actually needs to decide |
 | [`pre-mortem`](skills/pre-mortem/SKILL.md) | Adapted | Pre-launch imagined-failure exercise: classify risks as Tigers, Paper Tigers, and Elephants to surface launch-blocking issues before they happen |
 | [`agile-coach`](skills/agile-coach/SKILL.md) | Included | Expert agile coaching: framework selection, maturity assessment, retrospective facilitation, transformation roadmaps |
 | [`atlassian-admin`](skills/atlassian-admin/SKILL.md) | Included | Administer the Atlassian suite (Jira/Confluence): user provisioning, groups, SSO/SAML, permissions, security policies, marketplace apps, backups, and org-wide governance |
@@ -47,3 +50,18 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 | [`test-scenarios`](skills/test-scenarios/SKILL.md) | Included | Generate test scenario coverage from a feature spec — happy paths, edge cases, error handling, accessibility, security, and performance — with a coverage analyzer that… |
 | [`wwas`](skills/wwas/SKILL.md) | Included | Why-What-Acceptance backlog format that connects every work item to strategic business objectives, with INVEST quality gates and observable acceptance criteria |
 <!-- catalog:end -->
+
+## Hooks
+
+Ships one hook. It's active for anyone who installs this plugin; silence it with an env var rather than uninstalling.
+
+| Event | Script | What it does | Off switch |
+|---|---|---|---|
+| `SessionStart` | [`standup-nudge.sh`](hooks/standup-nudge.sh) | If a sprint plan exists in the project and today's standup prep hasn't been written, prints a one-line reminder to run `/programs:standup`. Quiet on weekends and when there's no sprint plan. Never writes anything. | `SO_STANDUP_NUDGE=off` |
+
+Paths it looks for, relative to the project root (override with env vars):
+
+| Env var | Default | Meaning |
+|---|---|---|
+| `SO_SPRINT_PLAN` | `sprint.md` | The current sprint plan — its presence means "this project runs sprints" |
+| `SO_STANDUP_DIR` | `standups/` | Where `/programs:standup` writes its prep, named `YYYY-MM-DD*.md` |

@@ -2,7 +2,7 @@
   "name": "intelligence",
   "displayName": "Intelligence",
   "version": "0.1.0",
-  "description": "Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief.",
+  "description": "Build a standing market intelligence function: map and size a market, run the loop from signal to research to pattern, and read specific partners and competitors.",
   "author": {
     "name": "Mai Lam"
   },
