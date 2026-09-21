@@ -66,6 +66,7 @@ A decision on where to spend Q4 engineering to stop first-month churn.
 # We're asking for six weeks of one squad in Q4, starting the first sprint.
 
 **Decider:** VP Product · **By:** 2026-09-30
+**Scope:** one squad, six weeks, no new headcount
 **If not decided:** Q4 planning locks without it, and first-month churn continues at the current rate through Q1
 
 ---

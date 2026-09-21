@@ -28,7 +28,7 @@ One source, two renderers. The deck is written once in the grammar (Marp-flavour
 | Output | pdf · html · pptx (image-based) | pdf · pptx · html (static site) |
 | Theme | `assets/operator*.css` — base + one variant per audience | `assets/slidev/theme/` — one Vue layout per grammar type, same tokens and variants |
 
-`scripts/to_slidev.py` translates grammar source to Slidev source (`_class` → `layout: op-<type>`, audience → deck config); the theme's `global-top.vue` draws header, footer, and page numbers. Both engines produce the same slide for the same source — that's the test.
+`scripts/lint_deck.py` runs before every render: unknown slide types, cap, bullets, label headlines on claim slides, evidence without a source, ask without decider/date/scope. It checks what a script can check; `deck-critic` does the rest. `scripts/to_slidev.py` translates grammar source to Slidev source (`_class` → `layout: op-<type>`, audience → deck config); the theme's `global-top.vue` draws header, footer, and page numbers. Both engines produce the same slide for the same source — that's the test.
 
 ## Install
 

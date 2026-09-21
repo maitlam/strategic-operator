@@ -20,6 +20,12 @@ jobs:
       - name: Check provenance labels, sources.json, and catalog
         run: python3 scripts/catalog.py --check
 
+      - name: Lint example decks against the slide grammar
+        run: |
+          for deck in plugins/communications/skills/deck/examples/*.md; do
+            python3 plugins/communications/skills/deck/scripts/lint_deck.py "$deck"
+          done
+
       - uses: actions/setup-node@v7
         with:
           node-version: "22"

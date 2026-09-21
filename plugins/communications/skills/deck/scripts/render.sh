@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # Render a deck written in the operator slide grammar.
 #
-#   render.sh <deck.md> [--engine marp|slidev] [--pdf] [--html] [--pptx] [--all] [-o <dir>]
+#   render.sh <deck.md> [--engine marp|slidev] [--pdf] [--html] [--pptx] [--all] [-o <dir>] [--no-lint]
 #
 # Defaults: --engine marp, --pdf. Output lands next to the source unless -o is given.
+# Runs lint_deck.py first; grammar errors stop the render (--no-lint to skip).
 #
 # marp   — fast, dependency-light. Uses a global `marp` if installed, otherwise
 #          `npx @marp-team/marp-cli` (Node; network on first run). PPTX is
@@ -20,10 +21,11 @@ here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 themes="$here/../assets"
 workspace="$here/../assets/slidev"
 
-src=""; outdir=""; engine="marp"; formats=()
+src=""; outdir=""; engine="marp"; formats=(); lint=1
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --engine) engine="$2"; shift 2 ;;
+    --no-lint) lint=0; shift ;;
     --pdf|--html|--pptx) formats+=("${1#--}"); shift ;;
     --all) formats+=(pdf html pptx); shift ;;
     -o) outdir="$2"; shift 2 ;;
@@ -33,6 +35,9 @@ while [[ $# -gt 0 ]]; do
 done
 
 [[ -n "$src" && -f "$src" ]] || { echo "render.sh: deck markdown file required" >&2; exit 1; }
+if [[ "$lint" == 1 ]]; then
+  python3 "$here/lint_deck.py" "$src" >&2 || { echo "render.sh: grammar errors — fix them or pass --no-lint" >&2; exit 1; }
+fi
 [[ ${#formats[@]} -eq 0 ]] && formats=(pdf)
 [[ -z "$outdir" ]] && outdir="$(cd "$(dirname "$src")" && pwd)"
 mkdir -p "$outdir"

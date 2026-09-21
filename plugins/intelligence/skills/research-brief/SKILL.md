@@ -48,9 +48,37 @@ Also check what the team already has on the topic, so the brief extends it rathe
 1. **Confirm scope** and restate the question the brief answers in one sentence.
 2. **Decompose.** Choose the lenses that apply; write two to four sub-questions under each. This list is the research plan and goes in the brief's appendix.
 3. **Research each lens.**
-   - If the `lens-researcher` agent is available: launch one per lens in parallel, each with its sub-questions, the topic framing, the depth target, and a findings file to write to. Collect the files.
+   - If the `lens-researcher` agent is available: launch one per lens in parallel using the template below — fill the brackets, change nothing else. Collect the files.
    - Otherwise: work the lenses in sequence, writing findings to a file as you go.
    Either way, every finding is a sourced, dated, tagged statement.
+
+   **Lens-researcher launch template** (one per lens, all launched in the same turn):
+
+   ```
+   You are the `lens-researcher` agent. Read your instructions first at
+   [path to lens-researcher.md] and follow them exactly.
+
+   TOPIC: [topic]
+   BOUNDARY: [what's in, what's out, geography]
+   QUESTION THE BRIEF ANSWERS: [the one sentence from step 1]
+   YOUR LENS: **[Lens name]** — [one-line description of the lens's job]
+   DEPTH TARGET: [quick | standard | deep]
+   FINDINGS FILE: [absolute path]/findings/[lens].md
+
+   SUB-QUESTIONS:
+   1. [sub-question]
+   2. [sub-question]
+   3. [sub-question]
+   4. [sub-question]
+
+   Prefer primary sources: [name the kinds that matter for this topic —
+   filings, official statistics, published studies with methodology, dated
+   announcements]. Label company self-reported figures as such. Date
+   everything. Do not fabricate — `unknown` is a valid entry.
+
+   When done, return: the findings file path, the two or three most
+   load-bearing findings, and the unknowns.
+   ```
 4. **Synthesize across lenses.** Where do they agree? Where does the money lens contradict the players lens, or the evidence lens undercut the operations story? Disagreement between lenses is usually the most useful paragraph in the brief.
 5. **Write** to the depth and audience agreed. Lead with the answer; support it; end with what remains open.
 6. **List sources and gaps.** Every source with its date. Every sub-question that couldn't be answered from public material, and what would answer it.

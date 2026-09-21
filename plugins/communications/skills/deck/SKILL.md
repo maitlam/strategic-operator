@@ -47,12 +47,12 @@ Ask for what's missing; don't assume.
 
 1. **Read the source fully** and write the answer in one sentence. That sentence becomes the `answer` slide's headline and the deck's spine. If it can't be written, the source isn't ready to present.
 2. **Load the audience profile** from `references/audience-<name>.md`. Take its sequence, cap, tone rules, and strip/add list as constraints, not suggestions.
-3. **Outline in headlines.** For each slot in the profile's sequence, write the slide's headline as a claiming sentence. Read the headlines top to bottom. Fix the argument here, before any body content exists — it's ten times cheaper.
+3. **Outline in headlines.** For each slot in the profile's sequence, write the slide's headline as a claiming sentence. Read the claim headlines (`answer`, `point`, `evidence`, `options`, `ask`) top to bottom — label types are exempt. Every `point` headline must already appear, in short form, on the `answer` slide. Fix the argument here, before any body content exists — it's ten times cheaper.
 4. **Fill the bodies** from the source. `point` slides get three bullets or one visual. `evidence` slides get the numbers with sources and boundaries. Strip what the profile says to strip; add what it says to add.
-5. **Write the `ask`** — named decider, date, consequence of no decision. If the profile calls for one and the source has none, ask the user; don't invent an ask.
+5. **Write the `ask`** — named decider, date, scope of what yes commits, consequence of no decision. The ask must follow from the points: if it asks for something no preceding slide argued for, add the point or change the ask. If the profile calls for one and the source has none, ask the user; don't invent an ask. If the ask is to close gaps, the method must be one the source says can close them.
 6. **Move everything else to the appendix.** If the main deck exceeds the cap, the argument has too many points; cut points, don't shrink type.
 7. **Write `deck.md`** with the frontmatter contract and the grammar markup, then **render** with `scripts/render.sh deck.md --pdf` (add `--html` or `--pptx` as needed).
-8. **Run the headline test** on the rendered deck: headlines only, top to bottom. If the case doesn't hold, go back to step 3.
+8. **Run the headline test** on the rendered deck: claim headlines only, top to bottom. Then the **cover test**: hide every slide except `answer` and `ask` — can the room decide? If either fails, go back to step 3.
 
 ## Output
 
@@ -70,7 +70,8 @@ Two files, plus a short handoff.
 - **Under the profile's cap** without shrinking type or cramming. Over the cap means too many points, not too little room.
 - **No slide with both bullets and a visual.** Pick.
 - **Every number on an `evidence` slide has a source, a date, and a boundary.**
-- **The `ask` names a decider and a date**, or the deck says explicitly that it isn't asking for one.
+- **The `ask` names a decider, a date, and a scope**, or the deck says explicitly that it isn't asking for one.
+- **Every number traces to the source at the source's confidence.** Nothing the source doesn't contain; nothing tagged `inferred` stated flat; nothing two source facts were compressed into. This is where fluent authors fail — the deck reads well and says something the source never said.
 - **Nothing from the strip list survives into the main deck.** It goes to the appendix or goes away.
 - **The deck can be sent without being presented.** If it only works with a voiceover, the headlines aren't doing their job.
 
