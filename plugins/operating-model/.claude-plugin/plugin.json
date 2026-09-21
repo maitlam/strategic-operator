@@ -1,7 +1,7 @@
 {
   "name": "operating-model",
   "displayName": "Operating Model",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit.",
   "author": {
     "name": "Mai Lam"

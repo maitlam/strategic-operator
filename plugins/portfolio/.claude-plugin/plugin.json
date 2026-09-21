@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "displayName": "Portfolio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity.",
   "author": {
     "name": "Mai Lam"

@@ -1,7 +1,7 @@
 {
   "name": "communications",
   "displayName": "Communications",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders.",
   "author": {
     "name": "Mai Lam"

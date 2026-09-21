@@ -1,7 +1,7 @@
 {
   "name": "discovery",
   "displayName": "Discovery",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise.",
   "author": {
     "name": "Mai Lam"
