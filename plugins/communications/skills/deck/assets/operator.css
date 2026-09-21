@@ -1,0 +1,142 @@
+/* @theme operator */
+/*
+ * Operator — base deck theme for the communications plugin. Built from
+ * scratch (no Marp built-in theme imported) so slide-type and audience rules
+ * never fight a base stylesheet.
+ *
+ * Slide types via `<!-- _class: … -->`: title, answer, section, evidence,
+ * options, ask, appendix. Audience variants are separate themes that import
+ * this one: operator-exec, operator-internal, operator-external.
+ */
+
+:root {
+  --op-ink: #1a1a1a;
+  --op-muted: #6b6b6b;
+  --op-accent: #1f5f8b;
+  --op-rule: #d9d9d9;
+  --op-bg: #ffffff;
+  --op-bg-alt: #f4f6f8;
+  --op-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --op-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --op-size: 28px;
+  --op-pad-x: 72px;
+  --op-pad-top: 64px;
+  --op-pad-bottom: 72px;
+}
+
+/* ---- Slide box --------------------------------------------------------- */
+
+section {
+  width: 1280px;
+  height: 720px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--op-pad-top) var(--op-pad-x) var(--op-pad-bottom);
+  font-family: var(--op-font);
+  font-size: var(--op-size);
+  line-height: 1.35;
+  color: var(--op-ink);
+  background: var(--op-bg);
+}
+
+/* Accent bars are pseudo-elements so they never depend on box borders. */
+section::before {
+  content: "";
+  position: absolute;
+  display: none;
+  background: var(--op-accent);
+}
+
+/* ---- Type -------------------------------------------------------------- */
+
+section h1 { font-size: 1.55em; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 0.5em; color: var(--op-ink); }
+section h2 { font-size: 1.2em;  font-weight: 700; line-height: 1.2;  letter-spacing: -0.01em; margin: 0 0 0.45em; color: var(--op-ink); }
+section h3 { font-size: 0.95em; font-weight: 600; margin: 0.6em 0 0.3em; color: var(--op-muted); }
+section p  { margin: 0.2em 0; }
+section ul, section ol { margin: 0.3em 0 0.3em 1.15em; padding: 0; }
+section li { margin: 0.18em 0; }
+section li > ul, section li > ol { margin-top: 0.1em; }
+section strong { font-weight: 700; color: var(--op-accent); }
+section em { font-style: italic; }
+section a { color: var(--op-accent); text-decoration: none; }
+section code { font-family: var(--op-mono); font-size: 0.82em; background: var(--op-bg-alt); padding: 0.05em 0.3em; border-radius: 3px; }
+section pre { font-family: var(--op-mono); font-size: 0.7em; background: var(--op-bg-alt); padding: 0.8em 1em; border-radius: 4px; overflow: hidden; }
+section pre code { background: none; padding: 0; font-size: 1em; }
+section blockquote { margin: 0.4em 0; padding: 0.1em 0 0.1em 0.7em; border-left: 4px solid var(--op-accent); color: var(--op-muted); }
+section hr { border: 0; border-top: 1px solid var(--op-rule); margin: 0.6em 0; }
+section img { max-width: 100%; max-height: 100%; }
+
+/* ---- Tables ------------------------------------------------------------ */
+
+section table { width: 100%; border-collapse: collapse; font-size: 0.72em; line-height: 1.3; margin: 0.3em 0; font-variant-numeric: tabular-nums; }
+section table th { text-align: left; font-weight: 700; padding: 0.35em 0.55em; border-bottom: 2px solid var(--op-ink); }
+section table td { padding: 0.35em 0.55em; border-bottom: 1px solid var(--op-rule); vertical-align: top; }
+section table tr:last-child td { border-bottom: 1px solid var(--op-ink); }
+
+/* ---- Header, footer, page number -------------------------------------- */
+
+section header, section footer {
+  position: absolute;
+  left: var(--op-pad-x);
+  right: var(--op-pad-x);
+  font-size: 0.5em;
+  color: var(--op-muted);
+  margin: 0;
+}
+section header { top: 24px; }
+section footer { bottom: 24px; }
+section::after {
+  content: attr(data-marpit-pagination);
+  position: absolute;
+  padding: 0;               /* Marpit injects padding: inherit; cancel it */
+  margin: 0;
+  right: var(--op-pad-x);
+  bottom: 24px;
+  font-size: 0.5em;
+  color: var(--op-muted);
+}
+section[data-marpit-pagination-total]::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+}
+
+/* ---- Slide types ------------------------------------------------------- */
+
+/* title: centered, tinted, no page number */
+section.title { justify-content: center; background: var(--op-bg-alt); }
+section.title h1 { font-size: 2.1em; margin-bottom: 0.25em; }
+section.title p { color: var(--op-muted); font-size: 0.95em; }
+section.title::after { display: none; }
+
+/* answer: the conclusion — accent bar down the left */
+section.answer::before { display: block; left: 0; top: 0; bottom: 0; width: 14px; }
+section.answer { padding-left: calc(var(--op-pad-x) + 8px); justify-content: center; }
+section.answer h1 { font-size: 1.45em; }
+section.answer h1 + p, section.answer h1 + ul { font-size: 1.02em; }
+
+/* section: divider — inverted */
+section.section { justify-content: center; background: var(--op-accent); color: #fff; }
+section.section h1, section.section h2 { color: #fff; }
+section.section p { color: rgba(255, 255, 255, 0.82); }
+section.section header, section.section footer, section.section::after { color: rgba(255, 255, 255, 0.7); }
+
+/* evidence: a little smaller; .source pinned to the bottom */
+section.evidence { font-size: calc(var(--op-size) * 0.88); }
+section.evidence h1 { font-size: 1.4em; }
+section.evidence .source, section.evidence p.source { margin-top: auto; padding-top: 0.6em; font-size: 0.62em; color: var(--op-muted); }
+
+/* options: table-first */
+section.options table { font-size: 0.68em; }
+section.options table th:first-child, section.options table td:first-child { color: var(--op-muted); font-weight: 600; width: 18%; }
+
+/* ask: tinted with an accent bar across the top */
+section.ask { background: var(--op-bg-alt); justify-content: center; }
+section.ask::before { display: block; left: 0; right: 0; top: 0; height: 10px; }
+section.ask h1 { font-size: 1.45em; }
+
+/* appendix: smaller, muted title */
+section.appendix { font-size: calc(var(--op-size) * 0.8); }
+section.appendix h1 { font-size: 1.35em; color: var(--op-muted); }

@@ -1,0 +1,8 @@
+/* @theme operator-external */
+/* External stakeholders: restrained, with a standing confidentiality line. */
+@import 'operator';
+
+:root {
+  --op-size: 28px;
+}
+section footer::before { content: "Confidential — shared for discussion · "; }

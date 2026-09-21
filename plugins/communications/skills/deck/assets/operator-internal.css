@@ -1,0 +1,11 @@
+/* @theme operator-internal */
+/* Internal team: denser. Shows the work. */
+@import 'operator';
+
+:root {
+  --op-size: 25px;
+  --op-pad-x: 64px;
+  --op-pad-top: 56px;
+  --op-pad-bottom: 64px;
+}
+section table { font-size: 0.72em; }

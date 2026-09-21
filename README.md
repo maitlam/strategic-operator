@@ -1,6 +1,6 @@
 # Strategic Operator
 
-Open-source Claude skills, subagents, and automations for Biz Ops, Strategy, and Program Management.
+Open-source Claude skills, subagents, and automations for Biz Ops, Strategy, Program Management, and Communications.
 
 [![Validate](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml/badge.svg)](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml)
 
@@ -26,6 +26,7 @@ claude plugin install intelligence@strategic-operator
 claude plugin install discovery@strategic-operator
 claude plugin install positioning@strategic-operator
 claude plugin install product-planning@strategic-operator
+claude plugin install communications@strategic-operator
 ```
 
 **Claude Cowork.** Add `maitlam/strategic-operator` as a marketplace from the plugins directory.
@@ -37,6 +38,7 @@ Help me define a north star metric for [your product].
 Map the ecosystem for [an unfamiliar market].
 Draft a positioning brief for [our team].
 Review this PRD I've written.
+Turn this brief into a deck for leadership.
 ```
 
 Prefer explicit invocation? Every skill is directly callable — `/discovery:jtbd-workshop`, `/portfolio:opportunity-scoring`, `/positioning:positioning-brief`.
@@ -95,7 +97,7 @@ A user request usually enters via **description matching a skill** or **describi
 
 ```
 strategic-operator/
-├── .claude-plugin/marketplace.json   # the marketplace: lists the eight plugins
+├── .claude-plugin/marketplace.json   # the marketplace: lists the nine plugins
 ├── plugins/
 │   ├── bizops/                       # each plugin has the same shape:
 │   ├── programs/                     #   .claude-plugin/plugin.json  manifest
@@ -104,7 +106,8 @@ strategic-operator/
 │   ├── intelligence/                 #   commands/<name>.md          one file per command
 │   ├── discovery/                    #   hooks/hooks.json + *.sh     event-triggered, ship with the plugin
 │   ├── positioning/                  #   README.md, CONNECTORS.md, LICENSES/
-│   └── product-planning/
+│   ├── product-planning/
+│   └── communications/               #   (deck skill also carries assets/, scripts/, references/, examples/)
 ├── templates/                        # starting points for original and adapted skills
 ├── scripts/
 │   ├── catalog.py                    # builds the catalog, checks labels, removes skills
@@ -129,13 +132,16 @@ strategic-operator/
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 6 | 6 | 0 | 0 |
 | [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 6 | 6 | 0 | 0 |
 | [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: map and size a market, run the loop from signal to research to pattern, and read specific partners and competitors. | 12 | 12 | 0 | 0 |
-| **Total** | | **109** | **34** | **4** | **71** |
+| [Communications](plugins/communications/README.md) | Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders. | 2 | 2 | 0 | 0 |
+| **Total** | | **111** | **36** | **4** | **71** |
 
-Counts include 94 skills, 6 commands, and 9 agents.
+Counts include 95 skills, 7 commands, and 9 agents.
 
 ### My original and adapted work
 
 - [`/meeting-prep`](plugins/bizops/commands/meeting-prep.md) (command) · Original · bizops: Prep for a meeting — its purpose and the decision it needs, open items from last time, who's in the room and what they care about, the questions to ask, and a time-boxed…
+- [`deck`](plugins/communications/skills/deck/SKILL.md) · Original · communications: Build a slide deck from an existing analysis — a brief, a status report, a portfolio read, a roadmap — using a fixed slide grammar and an audience profile, and render it…
+- [`/deck`](plugins/communications/commands/deck.md) (command) · Original · communications: Build and render a slide deck from an existing artifact for a named audience — exec, internal, or external — using the deck skill's slide grammar and audience profiles
 - [`discovery-cadence`](plugins/discovery/skills/discovery-cadence/SKILL.md) · Original · discovery: Design or diagnose the operating rhythm of continuous customer discovery — the weekly beat that produces learning, not the one-off "round of interviews" that produces a…
 - [`/feedback-weekly`](plugins/discovery/commands/feedback-weekly.md) (command) · Original · discovery: Weekly customer-feedback analysis — gather the week's inbound from every channel, triage and deduplicate it, count independent sources per theme, show what moved since…
 - [`product-discovery-researcher`](plugins/discovery/agents/product-discovery-researcher.md) (agent) · Original · discovery: Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence
@@ -215,6 +221,7 @@ Deterministic — same input, same execution, every time.
 | [`/programs:retro`](plugins/programs/commands/retro.md) | programs | Retrospective — follow-through check, data first, ≤3 owned actions, durable lessons filed separately; `--incident` routes to post-mortem |
 | [`/bizops:meeting-prep`](plugins/bizops/commands/meeting-prep.md) | bizops | Meeting prep — purpose and decision sought, open items from last time, the room, questions, time-boxed agenda; or a recommendation to cancel |
 | [`/discovery:feedback-weekly`](plugins/discovery/commands/feedback-weekly.md) | discovery | Weekly customer-feedback digest — triage, independent-source counts per theme, trend vs last week, routing to roadmap / bug / research |
+| [`/communications:deck`](plugins/communications/commands/deck.md) | communications | Build and render a deck from an existing artifact for a named audience — exec, internal, or external |
 
 ### Hooks
 

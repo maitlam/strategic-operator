@@ -4,7 +4,7 @@
     "name": "Mai Lam",
     "url": "https://github.com/maitlam"
   },
-  "description": "Open-source Claude skills for Biz Ops, Strategy, and Program Management.",
+  "description": "Open-source Claude skills for Biz Ops, Strategy, Program Management, and Communications.",
   "plugins": [
     {
       "name": "bizops",
@@ -53,6 +53,12 @@
       "displayName": "Intelligence",
       "source": "./plugins/intelligence",
       "description": "Build a standing market intelligence function: ecosystem mapping, partner scans, competitive reads, and a recurring signals brief."
+    },
+    {
+      "name": "communications",
+      "displayName": "Communications",
+      "source": "./plugins/communications",
+      "description": "Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders."
     }
   ]
 }

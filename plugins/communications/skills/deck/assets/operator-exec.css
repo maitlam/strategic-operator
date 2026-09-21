@@ -1,0 +1,12 @@
+/* @theme operator-exec */
+/* Executives: larger type, more air. Fewer words fit — by design. */
+@import 'operator';
+
+:root {
+  --op-size: 31px;
+  --op-pad-x: 88px;
+  --op-pad-top: 72px;
+  --op-pad-bottom: 80px;
+}
+section h1 { font-size: 1.5em; }
+section table { font-size: 0.66em; }

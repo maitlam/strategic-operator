@@ -1,0 +1,11 @@
+{
+  "name": "communications",
+  "displayName": "Communications",
+  "version": "0.1.0",
+  "description": "Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders.",
+  "author": {
+    "name": "Mai Lam"
+  },
+  "homepage": "https://github.com/maitlam/strategic-operator",
+  "repository": "https://github.com/maitlam/strategic-operator"
+}
