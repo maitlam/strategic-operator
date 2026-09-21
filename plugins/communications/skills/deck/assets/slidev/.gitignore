@@ -1,0 +1,5 @@
+node_modules/
+*.slidev.md
+*.pdf
+*.pptx
+dist/

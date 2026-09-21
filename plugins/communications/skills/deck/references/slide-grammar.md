@@ -7,7 +7,7 @@ Marp markup that produces it with the `operator` theme.
 
 Slides are separated by `---`. A slide's type is set with `<!-- _class: type -->`
 on its first line. The audience is chosen once, in frontmatter, by picking the
-theme variant: `operator-exec`, `operator-internal`, or `operator-external`.
+theme variant: `operator-exec`, `operator-internal`, `operator-external`, or `operator-board`.
 (Marp's `_class` replaces rather than adds to a deck-level class, which is why
 audience lives in the theme and slide type lives in the class.)
 
@@ -16,7 +16,7 @@ audience lives in the theme and slide type lives in the class.)
 ```markdown
 ---
 marp: true
-theme: operator-exec   # operator-exec | operator-internal | operator-external
+theme: operator-exec   # operator-exec | operator-internal | operator-external | operator-board
 paginate: true
 header: "[Deck name] · [Audience]"
 footer: "[Date] · [Source artifact]"

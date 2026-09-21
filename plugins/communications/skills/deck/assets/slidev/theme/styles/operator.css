@@ -1,0 +1,120 @@
+/*
+ * Operator — Slidev rendering of the deck grammar. A port of ../../operator.css:
+ * same tokens, same slide types, same audience variants. Slide types are
+ * layouts (.op-<type>); audience is a class on the layout and the chrome.
+ */
+
+:root {
+  --op-ink: #1a1a1a;
+  --op-muted: #6b6b6b;
+  --op-accent: #1f5f8b;
+  --op-rule: #d9d9d9;
+  --op-bg: #ffffff;
+  --op-bg-alt: #f4f6f8;
+  --op-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --op-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --op-size: 28px;
+  --op-pad-x: 72px;
+  --op-pad-top: 64px;
+  --op-pad-bottom: 72px;
+}
+
+/* ---- Slide box --------------------------------------------------------- */
+
+.slidev-layout.op {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--op-pad-top) var(--op-pad-x) var(--op-pad-bottom);
+  font-family: var(--op-font);
+  font-size: var(--op-size);
+  line-height: 1.35;
+  color: var(--op-ink);
+  background: var(--op-bg);
+}
+.slidev-layout.op::before { content: ""; position: absolute; display: none; background: var(--op-accent); }
+
+/* ---- Type -------------------------------------------------------------- */
+
+.slidev-layout.op h1 { font-size: 1.55em; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 0.5em; color: var(--op-ink); }
+.slidev-layout.op h2 { font-size: 1.2em;  font-weight: 700; line-height: 1.2;  letter-spacing: -0.01em; margin: 0 0 0.45em; color: var(--op-ink); }
+.slidev-layout.op h3 { font-size: 0.95em; font-weight: 600; margin: 0.6em 0 0.3em; color: var(--op-muted); }
+.slidev-layout.op p  { margin: 0.2em 0; }
+.slidev-layout.op ul, .slidev-layout.op ol { margin: 0.3em 0 0.3em 1.15em; padding: 0; list-style: disc; }
+.slidev-layout.op ol { list-style: decimal; }
+.slidev-layout.op li { margin: 0.18em 0; }
+.slidev-layout.op strong { font-weight: 700; color: var(--op-accent); }
+.slidev-layout.op a { color: var(--op-accent); text-decoration: none; }
+.slidev-layout.op code { font-family: var(--op-mono); font-size: 0.82em; background: var(--op-bg-alt); padding: 0.05em 0.3em; border-radius: 3px; }
+.slidev-layout.op pre { font-family: var(--op-mono); font-size: 0.7em; background: var(--op-bg-alt); padding: 0.8em 1em; border-radius: 4px; }
+.slidev-layout.op blockquote { margin: 0.4em 0; padding: 0.1em 0 0.1em 0.7em; border-left: 4px solid var(--op-accent); color: var(--op-muted); }
+.slidev-layout.op hr { border: 0; border-top: 1px solid var(--op-rule); margin: 0.6em 0; }
+.slidev-layout.op img { max-width: 100%; max-height: 100%; }
+
+/* ---- Tables ------------------------------------------------------------ */
+
+.slidev-layout.op table { width: 100%; border-collapse: collapse; font-size: 0.72em; line-height: 1.3; margin: 0.3em 0; font-variant-numeric: tabular-nums; }
+.slidev-layout.op table th { text-align: left; font-weight: 700; padding: 0.35em 0.55em; border-bottom: 2px solid var(--op-ink); background: none; }
+.slidev-layout.op table td { padding: 0.35em 0.55em; border-bottom: 1px solid var(--op-rule); vertical-align: top; background: none; }
+.slidev-layout.op table tr:last-child td { border-bottom: 1px solid var(--op-ink); }
+
+/* ---- Chrome: header, footer, page number (global-top.vue) ------------- */
+
+.op-chrome { position: absolute; inset: 0; pointer-events: none; font-family: var(--op-font); font-size: calc(var(--op-size) * 0.5); color: var(--op-muted); }
+.op-chrome .op-header { position: absolute; top: 24px; left: var(--op-pad-x); right: var(--op-pad-x); }
+.op-chrome .op-footer { position: absolute; bottom: 24px; left: var(--op-pad-x); right: 200px; }
+.op-chrome .op-page   { position: absolute; bottom: 24px; right: var(--op-pad-x); }
+.op-chrome.on-dark { color: rgba(255, 255, 255, 0.7); }
+
+/* ---- Slide types ------------------------------------------------------- */
+
+.slidev-layout.op-title { justify-content: center; background: var(--op-bg-alt); }
+.slidev-layout.op-title h1 { font-size: 2.1em; margin-bottom: 0.25em; }
+.slidev-layout.op-title p { color: var(--op-muted); font-size: 0.95em; }
+
+.slidev-layout.op-answer::before { display: block; left: 0; top: 0; bottom: 0; width: 14px; }
+.slidev-layout.op-answer { padding-left: calc(var(--op-pad-x) + 8px); justify-content: center; }
+.slidev-layout.op-answer h1 { font-size: 1.45em; }
+.slidev-layout.op-answer h1 + p, .slidev-layout.op-answer h1 + ul { font-size: 1.02em; }
+
+.slidev-layout.op-section { justify-content: center; background: var(--op-accent); color: #fff; }
+.slidev-layout.op-section h1, .slidev-layout.op-section h2 { color: #fff; }
+.slidev-layout.op-section p { color: rgba(255, 255, 255, 0.82); }
+
+.slidev-layout.op-evidence { font-size: calc(var(--op-size) * 0.88); }
+.slidev-layout.op-evidence h1 { font-size: 1.4em; }
+.slidev-layout.op-evidence .source { margin-top: auto; padding-top: 0.6em; font-size: 0.62em; color: var(--op-muted); }
+
+.slidev-layout.op-options table { font-size: 0.68em; }
+.slidev-layout.op-options table th:first-child, .slidev-layout.op-options table td:first-child { color: var(--op-muted); font-weight: 600; width: 18%; }
+
+.slidev-layout.op-ask { background: var(--op-bg-alt); justify-content: center; }
+.slidev-layout.op-ask::before { display: block; left: 0; right: 0; top: 0; height: 10px; }
+.slidev-layout.op-ask h1 { font-size: 1.45em; }
+
+.slidev-layout.op-appendix { font-size: calc(var(--op-size) * 0.8); }
+.slidev-layout.op-appendix h1 { font-size: 1.35em; color: var(--op-muted); }
+
+/* ---- Audience variants ------------------------------------------------- */
+
+.slidev-layout.op.exec { --op-size: 31px; --op-pad-x: 88px; --op-pad-top: 72px; --op-pad-bottom: 80px; }
+.slidev-layout.op.exec h1 { font-size: 1.5em; }
+.slidev-layout.op.exec table { font-size: 0.66em; }
+.op-chrome.exec { --op-pad-x: 88px; --op-size: 31px; }
+
+.slidev-layout.op.internal { --op-size: 25px; --op-pad-x: 64px; --op-pad-top: 56px; --op-pad-bottom: 64px; }
+.op-chrome.internal { --op-pad-x: 64px; --op-size: 25px; }
+
+.op-chrome.external .op-footer::before { content: "Confidential — shared for discussion · "; }
+
+.slidev-layout.op.board { --op-size: 30px; --op-pad-x: 88px; --op-pad-top: 72px; --op-pad-bottom: 80px; }
+.slidev-layout.op.board h1 { font-size: 1.45em; }
+.slidev-layout.op.board table { font-size: 0.7em; }
+.slidev-layout.op-evidence.board table td:not(:first-child), .slidev-layout.op-evidence.board table th:not(:first-child) { text-align: right; }
+.op-chrome.board { --op-pad-x: 88px; --op-size: 30px; }
+

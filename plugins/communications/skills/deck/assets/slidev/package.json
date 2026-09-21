@@ -1,0 +1,9 @@
+{
+  "name": "operator-slidev-workspace",
+  "private": true,
+  "description": "Workspace for rendering operator-grammar decks with Slidev. render.sh installs this on first use.",
+  "dependencies": {
+    "@slidev/cli": "^53",
+    "playwright-chromium": "^1"
+  }
+}

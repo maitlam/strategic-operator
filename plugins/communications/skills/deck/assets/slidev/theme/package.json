@@ -1,0 +1,12 @@
+{
+  "name": "slidev-theme-operator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Slidev rendering of the operator slide grammar. Layouts map 1:1 to grammar slide types.",
+  "slidev": {
+    "defaults": {
+      "aspectRatio": "16/9",
+      "canvasWidth": 1280
+    }
+  }
+}

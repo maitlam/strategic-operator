@@ -1,6 +1,6 @@
 ---
-description: Build and render a slide deck from an existing artifact for a named audience — exec, internal, or external — using the deck skill's slide grammar and audience profiles
-argument-hint: "<source file or artifact> --audience exec|internal|external [--pdf|--html|--pptx|--all]"
+description: Build and render a slide deck from an existing artifact for a named audience — exec, internal, external, or board — using the deck skill's slide grammar and audience profiles
+argument-hint: "<source file or artifact> --audience exec|internal|external|board [--engine marp|slidev] [--pdf|--html|--pptx|--all]"
 license: MIT
 metadata:
   provenance: original
@@ -31,7 +31,8 @@ Examples:
 ### 1. Resolve the inputs
 
 - **Source:** the file or pasted artifact. If none is given, ask. If the user has an idea but no artifact, point them at the skill that produces one — this command shapes, it doesn't analyze.
-- **Audience:** `exec`, `internal`, or `external`. If missing, ask; don't default.
+- **Audience:** `exec`, `internal`, `external`, or `board`. If missing, ask; don't default.
+- **Engine:** `marp` unless `--engine slidev` is passed. Slidev's first run installs a workspace (a few minutes).
 - **Format:** `--pdf` unless told otherwise.
 
 ### 2. Run the deck skill
@@ -41,7 +42,7 @@ Follow the `deck` skill in full: answer sentence → audience profile from `refe
 ### 3. Render
 
 ```bash
-<plugin-root>/skills/deck/scripts/render.sh <name>-<audience>.md --pdf
+<plugin-root>/skills/deck/scripts/render.sh <name>-<audience>.md --pdf [--engine slidev]
 ```
 
 Requires Node. Uses a global `marp` if present, otherwise `npx @marp-team/marp-cli` (network on first run).

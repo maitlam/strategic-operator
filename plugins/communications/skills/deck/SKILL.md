@@ -39,7 +39,7 @@ The deck is built from a fixed grammar — ten slide types, defined in `referenc
 Ask for what's missing; don't assume.
 
 - **The source.** The artifact this deck presents — a brief, a report, a roadmap, an analysis from another skill. If the user has only an idea and no artifact, point them at the skill that produces one first. This skill shapes; it doesn't analyze.
-- **The audience.** `exec`, `internal`, or `external`. If it's unclear, the question "who has to do something after seeing this?" usually settles it.
+- **The audience.** `exec`, `internal`, `external`, or `board`. If it's unclear, the question "who has to do something after seeing this?" usually settles it.
 - **The occasion.** How long is the slot, is it presented or sent, is there a decision on the table.
 - **The ask.** What should the room decide or do. If there's genuinely none, the deck is informational and the profile will shorten it.
 
@@ -76,4 +76,4 @@ Two files, plus a short handoff.
 
 ## Engine
 
-Marp, via `scripts/render.sh` and the themes in `assets/` — `operator` is the base; `operator-exec`, `operator-internal`, and `operator-external` import it and adjust type size, density, and footer. The content contract — frontmatter fields, `---` separators, `<!-- _class: type -->` slide types — is deliberately plain so another renderer can be added behind the same source. Marp's PPTX export is image-based; treat it as a sendable artifact, not an editable one.
+Marp, via `scripts/render.sh` and the themes in `assets/` — `operator` is the base; `operator-exec`, `operator-internal`, `operator-external`, and `operator-board` import it and adjust type size, density, and footer. The content contract — frontmatter fields, `---` separators, `<!-- _class: type -->` slide types — is deliberately plain so another renderer can be added behind the same source. Marp's PPTX export is image-based; treat it as a sendable artifact, not an editable one.

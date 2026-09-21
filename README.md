@@ -132,16 +132,17 @@ strategic-operator/
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 6 | 6 | 0 | 0 |
 | [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 6 | 6 | 0 | 0 |
 | [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: map and size a market, run the loop from signal to research to pattern, and read specific partners and competitors. | 12 | 12 | 0 | 0 |
-| [Communications](plugins/communications/README.md) | Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders. | 2 | 2 | 0 | 0 |
-| **Total** | | **111** | **36** | **4** | **71** |
+| [Communications](plugins/communications/README.md) | Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders. | 3 | 3 | 0 | 0 |
+| **Total** | | **112** | **37** | **4** | **71** |
 
-Counts include 95 skills, 7 commands, and 9 agents.
+Counts include 95 skills, 7 commands, and 10 agents.
 
 ### My original and adapted work
 
 - [`/meeting-prep`](plugins/bizops/commands/meeting-prep.md) (command) · Original · bizops: Prep for a meeting — its purpose and the decision it needs, open items from last time, who's in the room and what they care about, the questions to ask, and a time-boxed…
 - [`deck`](plugins/communications/skills/deck/SKILL.md) · Original · communications: Build a slide deck from an existing analysis — a brief, a status report, a portfolio read, a roadmap — using a fixed slide grammar and an audience profile, and render it…
-- [`/deck`](plugins/communications/commands/deck.md) (command) · Original · communications: Build and render a slide deck from an existing artifact for a named audience — exec, internal, or external — using the deck skill's slide grammar and audience profiles
+- [`/deck`](plugins/communications/commands/deck.md) (command) · Original · communications: Build and render a slide deck from an existing artifact for a named audience — exec, internal, external, or board — using the deck skill's slide grammar and audience…
+- [`deck-critic`](plugins/communications/agents/deck-critic.md) (agent) · Original · communications: Review a draft deck against its audience profile before it goes to the room — run the headline test, check the sequence and cap, find the slides carrying two ideas or…
 - [`discovery-cadence`](plugins/discovery/skills/discovery-cadence/SKILL.md) · Original · discovery: Design or diagnose the operating rhythm of continuous customer discovery — the weekly beat that produces learning, not the one-off "round of interviews" that produces a…
 - [`/feedback-weekly`](plugins/discovery/commands/feedback-weekly.md) (command) · Original · discovery: Weekly customer-feedback analysis — gather the week's inbound from every channel, triage and deduplicate it, count independent sources per theme, show what moved since…
 - [`product-discovery-researcher`](plugins/discovery/agents/product-discovery-researcher.md) (agent) · Original · discovery: Run customer discovery workflows — plan interview scripts, run interviews, synthesize transcripts, facilitate JTBD workshops, and ideate opportunities from evidence
@@ -187,7 +188,7 @@ Everything above is auto-generated from each item's frontmatter by `scripts/cata
 
 ## Subagents
 
-Nine agents wrap the multi-step workflows and personas. Skills are what agents call.
+Ten agents wrap the multi-step workflows and personas. Skills are what agents call.
 
 | Agent | Plugin | Wraps | Job |
 |---|---|---|---|
@@ -200,8 +201,9 @@ Nine agents wrap the multi-step workflows and personas. Skills are what agents c
 | [portfolio-manager](plugins/portfolio/agents/portfolio-manager.md) | portfolio | portfolio-health, resource-allocation, dependency-map, risk-assessment | Active-work tracking; kill discipline, no watermelon status |
 | [portfolio-prioritizer](plugins/portfolio/agents/portfolio-prioritizer.md) | portfolio | portfolio-intake, opportunity-scoring | Pipeline scoring; criteria declared before scoring, invest/pause/kill/investigate |
 | [launch-readiness](plugins/programs/agents/launch-readiness.md) | programs | launch-playbook, dependency-map, risk-assessment, pre-mortem | Cross-team readiness sweep with a defensible GO / CONDITIONAL GO / NO-GO |
+| [deck-critic](plugins/communications/agents/deck-critic.md) | communications | deck (its profiles and grammar) | Critic persona: headline test, profile compliance, located findings; reviews only, never rewrites |
 
-Research agents restrict tools to `WebSearch, WebFetch, Read, Grep, Glob` (no Edit/Write); lens-researcher adds `Write` for its append-only findings file. Orchestrators restrict to `Read, Grep, Glob`. Launch-readiness adds `WebFetch` for Confluence/Notion pulls.
+Research agents restrict tools to `WebSearch, WebFetch, Read, Grep, Glob` (no Edit/Write); lens-researcher adds `Write` for its append-only findings file. deck-critic is read-only by design. Orchestrators restrict to `Read, Grep, Glob`. Launch-readiness adds `WebFetch` for Confluence/Notion pulls.
 
 ---
 
@@ -221,7 +223,7 @@ Deterministic — same input, same execution, every time.
 | [`/programs:retro`](plugins/programs/commands/retro.md) | programs | Retrospective — follow-through check, data first, ≤3 owned actions, durable lessons filed separately; `--incident` routes to post-mortem |
 | [`/bizops:meeting-prep`](plugins/bizops/commands/meeting-prep.md) | bizops | Meeting prep — purpose and decision sought, open items from last time, the room, questions, time-boxed agenda; or a recommendation to cancel |
 | [`/discovery:feedback-weekly`](plugins/discovery/commands/feedback-weekly.md) | discovery | Weekly customer-feedback digest — triage, independent-source counts per theme, trend vs last week, routing to roadmap / bug / research |
-| [`/communications:deck`](plugins/communications/commands/deck.md) | communications | Build and render a deck from an existing artifact for a named audience — exec, internal, or external |
+| [`/communications:deck`](plugins/communications/commands/deck.md) | communications | Build and render a deck from an existing artifact for a named audience — exec, internal, external, or board — with Marp or Slidev |
 
 ### Hooks
 
