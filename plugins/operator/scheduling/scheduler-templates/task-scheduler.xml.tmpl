@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!--
+  Windows Task Scheduler template for a scheduled Operator ritual.
+
+  Variables substituted by /operator:setup-scheduling:
+    {{COMMAND}}       — "monday-packet" or "friday-wrap"
+    {{CLAUDE_BIN}}    — absolute path to claude.exe
+    {{STATE_DIR}}     — operator state dir (default %USERPROFILE%\.claude\operator)
+    {{START_DATETIME}} — ISO 8601 datetime of first run (e.g., 2026-10-19T08:00:00)
+    {{WEEKDAY}}       — "Monday" or "Friday"
+
+  Install (PowerShell, from the folder containing this file):
+    schtasks /create /xml .\{{COMMAND}}.xml /tn "Operator{{COMMAND}}"
+
+  Verify:
+    schtasks /query | findstr Operator
+
+  Disable:
+    schtasks /delete /tn "Operator{{COMMAND}}" /f
+-->
+<Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Description>Operator ritual: /operator:{{COMMAND}} (strategic-operator plugin)</Description>
+    <URI>\Operator{{COMMAND}}</URI>
+  </RegistrationInfo>
+  <Triggers>
+    <CalendarTrigger>
+      <StartBoundary>{{START_DATETIME}}</StartBoundary>
+      <Enabled>true</Enabled>
+      <ScheduleByWeek>
+        <DaysOfWeek>
+          <{{WEEKDAY}} />
+        </DaysOfWeek>
+        <WeeksInterval>1</WeeksInterval>
+      </ScheduleByWeek>
+    </CalendarTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+    <RunOnlyIfIdle>false</RunOnlyIfIdle>
+    <WakeToRun>false</WakeToRun>
+    <ExecutionTimeLimit>PT30M</ExecutionTimeLimit>
+    <Priority>7</Priority>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>{{CLAUDE_BIN}}</Command>
+      <Arguments>-p "/operator:{{COMMAND}} --from-inbox"</Arguments>
+      <WorkingDirectory>{{STATE_DIR}}</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>

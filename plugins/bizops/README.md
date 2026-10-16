@@ -11,6 +11,8 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`data-read`](skills/data-read/SKILL.md) | Original | First-pass scouting report on a data file — not full analysis, a "what's in here, what can I trust, what questions can this answer" read |
+| [`variance-commentary`](skills/variance-commentary/SKILL.md) | Original | Write variance commentary for a budget-vs-actual, forecast-vs-actual, or plan-vs-actual table — the one-line "why" next to each material variance that distinguishes a… |
 | [`/meeting-prep`](commands/meeting-prep.md) (command) | Original | Prep for a meeting — its purpose and the decision it needs, open items from last time, who's in the room and what they care about, the questions to ask, and a time-boxed… |
 | [`metrics-dashboard`](skills/metrics-dashboard/SKILL.md) | Adapted | Design the whole product metrics dashboard SYSTEM: layers, owners, review cadence, and visualization — the board a team actually reviews on a weekly or monthly rhythm |
 | [`north-star-metric`](skills/north-star-metric/SKILL.md) | Adapted | Define the North Star Metric spec: the single number, its input metric tree, leading indicators, anti-metrics, and counter-metrics — with a Python tool that renders it… |

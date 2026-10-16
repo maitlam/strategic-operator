@@ -124,22 +124,25 @@ strategic-operator/
 <!-- catalog:start -->
 | Plugin | Focus | Skills | Original | Adapted | Included |
 |---|---|---|---|---|---|
-| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 15 | 1 | 3 | 11 |
+| [Biz Ops](plugins/bizops/README.md) | Run the business: operating rhythm, planning and OKRs, metrics, processes, vendors, compliance, and meetings that actually decide things. | 17 | 3 | 3 | 11 |
 | [Discovery](plugins/discovery/README.md) | Continuous customer discovery: interview design, transcript synthesis, JTBD workshops, opportunity ideation, and the disciplines that keep discovery signal over noise. | 13 | 3 | 0 | 10 |
 | [Positioning](plugins/positioning/README.md) | Decide where to play and how to win: market frameworks (Porter's, SWOT, Ansoff), business-model canvases, ICP, and go-to-market strategy. | 9 | 1 | 0 | 8 |
 | [Product Planning](plugins/product-planning/README.md) | Turn strategy into product direction: PRDs, product vision, prioritization frameworks, and outcome-driven roadmaps. | 10 | 1 | 0 | 9 |
-| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 38 | 4 | 1 | 33 |
+| [Programs](plugins/programs/README.md) | Deliver cross-functional work: programs and portfolios, launches, dependencies, decisions, risk, agile delivery, and the tools teams run on. | 39 | 5 | 1 | 33 |
 | [Operating Model](plugins/operating-model/README.md) | Design how a team runs: the operating model itself, decision rights, governance forums, and OKRs. For teams with no existing process to inherit. | 6 | 6 | 0 | 0 |
-| [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 6 | 6 | 0 | 0 |
+| [Portfolio](plugins/portfolio/README.md) | Run a portfolio: intake, scoring against declared criteria, whole-portfolio health, and matching demand against real capacity. | 7 | 7 | 0 | 0 |
 | [Intelligence](plugins/intelligence/README.md) | Build a standing market intelligence function: map and size a market, run the loop from signal to research to pattern, and read specific partners and competitors. | 12 | 12 | 0 | 0 |
 | [Communications](plugins/communications/README.md) | Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders. | 3 | 3 | 0 | 0 |
-| **Total** | | **112** | **37** | **4** | **71** |
+| [Operator](plugins/operator/README.md) | The strategic operator's own toolkit: weekly rhythm rituals and exec comms craft. Role-centered — the connective-tissue work a generalist or chief of staff does on top of the function-centered plugins. | 9 | 9 | 0 | 0 |
+| **Total** | | **125** | **50** | **4** | **71** |
 
-Counts include 95 skills, 7 commands, and 10 agents.
+Counts include 103 skills, 11 commands, and 11 agents.
 
 ### My original and adapted work
 
+- [`data-read`](plugins/bizops/skills/data-read/SKILL.md) · Original · bizops: First-pass scouting report on a data file — not full analysis, a "what's in here, what can I trust, what questions can this answer" read
 - [`/meeting-prep`](plugins/bizops/commands/meeting-prep.md) (command) · Original · bizops: Prep for a meeting — its purpose and the decision it needs, open items from last time, who's in the room and what they care about, the questions to ask, and a time-boxed…
+- [`variance-commentary`](plugins/bizops/skills/variance-commentary/SKILL.md) · Original · bizops: Write variance commentary for a budget-vs-actual, forecast-vs-actual, or plan-vs-actual table — the one-line "why" next to each material variance that distinguishes a…
 - [`deck`](plugins/communications/skills/deck/SKILL.md) · Original · communications: Build a slide deck from an existing analysis — a brief, a status report, a portfolio read, a roadmap — using a fixed slide grammar and an audience profile, and render it…
 - [`/deck`](plugins/communications/commands/deck.md) (command) · Original · communications: Build and render a slide deck from an existing artifact for a named audience — exec, internal, external, or board — using the deck skill's slide grammar and audience…
 - [`deck-critic`](plugins/communications/agents/deck-critic.md) (agent) · Original · communications: Review a draft deck against its audience profile before it goes to the room — run the headline test, check the sequence and cap, find the slides carrying two ideas or…
@@ -164,15 +167,26 @@ Counts include 95 skills, 7 commands, and 10 agents.
 - [`okr-tracking`](plugins/operating-model/skills/okr-tracking/SKILL.md) · Original · operating-model: Draft, review, or check in on objectives and key results — including diagnosing OKRs that are really task lists in disguise
 - [`operating-model-builder`](plugins/operating-model/skills/operating-model-builder/SKILL.md) · Original · operating-model: Design an operating model for a team from scratch — purpose, cadence, artifacts, roles, and the decisions the model exists to make possible
 - [`operating-model-designer`](plugins/operating-model/agents/operating-model-designer.md) (agent) · Original · operating-model: Design a team's operating model from ambiguous inputs — purpose, cadence, artifacts, roles, decision rights, governance forums, and OKRs
+- [`decision-log`](plugins/operator/skills/decision-log/SKILL.md) · Original · operator: Maintain a running log of decisions — append new ones, query the history, mark pending items as decided, flag supersessions
+- [`exec-memo`](plugins/operator/skills/exec-memo/SKILL.md) · Original · operator: Rewrite a draft memo, update, or doc for an exec audience — pick the right pattern (BLUF for decision asks, SCQA for analytical framing, Amazon-narrative for…
+- [`/friday-wrap`](plugins/operator/commands/friday-wrap.md) (command) · Original · operator: Close the week — 3 wins, 3 misses, 3 to watch, plus a decision log of what actually got decided, what shipped vs
+- [`/monday-packet`](plugins/operator/commands/monday-packet.md) (command) · Original · operator: Produce the Monday morning packet — the three things that matter this week, high-stakes meetings and prep gaps, pending decisions, at-risk items you own, overnight asks…
+- [`/one-on-one-prep`](plugins/operator/commands/one-on-one-prep.md) (command) · Original · operator: Prep for a specific 1:1 — reads the stakeholder's profile, surfaces open asks in both directions, drafts three things to raise with anticipated pushback, three things to…
+- [`red-team-critic`](plugins/operator/agents/red-team-critic.md) (agent) · Original · operator: Stress-test an artifact before it ships — argue the strongest version of the counter-case, surface hidden assumptions, name who will push back on what, identify concrete…
+- [`/setup-scheduling`](plugins/operator/commands/setup-scheduling.md) (command) · Original · operator: One-time interactive wizard to set up scheduled Monday-packet and Friday-wrap rituals
+- [`stakeholder-profile`](plugins/operator/skills/stakeholder-profile/SKILL.md) · Original · operator: Maintain a living profile for a specific person — their role, what they care about, how they want information, prior positions and pushback, recent touchpoints, and open…
+- [`talking-points`](plugins/operator/skills/talking-points/SKILL.md) · Original · operator: Prepare three talking points for a specific meeting — each point with a one-line "say this," the supporting evidence, the anticipated pushback, and the response
 - [`opportunity-scoring`](plugins/portfolio/skills/opportunity-scoring/SKILL.md) · Original · portfolio: Score an opportunity, proposal, vendor, or investment candidate against explicit criteria and produce a comparable, defensible read
 - [`portfolio-health`](plugins/portfolio/skills/portfolio-health/SKILL.md) · Original · portfolio: Produce a whole-portfolio read — where the money and people actually are, what has stalled, what should be killed, and whether the mix matches the stated strategy
 - [`portfolio-intake`](plugins/portfolio/skills/portfolio-intake/SKILL.md) · Original · portfolio: Design or run the front door for a portfolio — how opportunities enter, what information is required before anything is evaluated, and what happens to things that don't…
 - [`portfolio-manager`](plugins/portfolio/agents/portfolio-manager.md) (agent) · Original · portfolio: Track and manage active initiatives across a portfolio — status, resources, dependencies, risks, executive sponsorship — and flag what's at risk or should be killed
 - [`portfolio-prioritizer`](plugins/portfolio/agents/portfolio-prioritizer.md) (agent) · Original · portfolio: Score new opportunities against declared strategic criteria and recommend invest / pause / kill / investigate
+- [`portfolio-timeline`](plugins/portfolio/skills/portfolio-timeline/SKILL.md) · Original · portfolio: Produce a swim-lane visual of a whole portfolio over a time window — initiatives aggregated to 1-3 bars each, cross-initiative resource conflicts surfaced, one-way doors…
 - [`resource-allocation`](plugins/portfolio/skills/resource-allocation/SKILL.md) · Original · portfolio: Match a portfolio's demands against a team's real capacity and show where it is oversubscribed, including the person-level constraints that determine dates
 - [`positioning-brief`](plugins/positioning/skills/positioning-brief/SKILL.md) · Original · positioning: Write or stress-test a one-page positioning brief — who we're for, what we do, why it's different, what we deliberately are not
 - [`prd-quality-gate`](plugins/product-planning/skills/prd-quality-gate/SKILL.md) · Original · product-planning: Review a draft PRD against a short quality checklist before it goes to a stakeholder — is a decision actually being requested, is success measurable, are assumptions…
 - [`launch-readiness`](plugins/programs/agents/launch-readiness.md) (agent) · Original · programs: Evaluate readiness across cross-functional teams before a launch — Product, Engineering, Legal/Privacy, Security, Operations, GTM, Support — and surface blockers,…
+- [`project-timeline`](plugins/programs/skills/project-timeline/SKILL.md) · Original · programs: Produce a visual timeline for a project, launch, or multi-phase initiative — Mermaid Gantt with critical path marked, reversibility noted on milestones (one-way vs
 - [`/retro`](plugins/programs/commands/retro.md) (command) · Original · programs: Run a sprint or milestone retrospective — data first, then the team's read, then one to three owned actions — and file the durable lessons somewhere they'll be read again
 - [`/sprint-kickoff`](plugins/programs/commands/sprint-kickoff.md) (command) · Original · programs: Run the sprint kickoff — real capacity, a readiness check on candidate stories, a commit-versus-stretch split, dependencies and risks named, and a one-sentence sprint…
 - [`/standup`](plugins/programs/commands/standup.md) (command) · Original · programs: Prep the daily standup — what moved since yesterday, what's aging, what's blocked, and the one or two things the standup actually needs to decide

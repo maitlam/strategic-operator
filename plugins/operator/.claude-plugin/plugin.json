@@ -1,0 +1,11 @@
+{
+  "name": "operator",
+  "displayName": "Operator",
+  "version": "0.2.0",
+  "description": "The strategic operator's own toolkit: weekly rhythm rituals and exec comms craft. Role-centered — the connective-tissue work a generalist or chief of staff does on top of the function-centered plugins.",
+  "author": {
+    "name": "Mai Lam"
+  },
+  "homepage": "https://github.com/maitlam/strategic-operator",
+  "repository": "https://github.com/maitlam/strategic-operator"
+}

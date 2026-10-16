@@ -59,6 +59,12 @@
       "displayName": "Communications",
       "source": "./plugins/communications",
       "description": "Turn any analysis into something an audience can act on: slide decks built from a fixed slide grammar, rendered from markdown, shaped differently for executives, the internal team, and external stakeholders."
+    },
+    {
+      "name": "operator",
+      "displayName": "Operator",
+      "source": "./plugins/operator",
+      "description": "The strategic operator's own toolkit: weekly rhythm rituals and exec comms craft. Role-centered — the connective-tissue work a generalist or chief of staff does on top of the function-centered plugins."
     }
   ]
 }

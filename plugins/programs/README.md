@@ -11,6 +11,7 @@ Some skills can pull from connected tools like Slack or Jira; see [CONNECTORS.md
 <!-- catalog:start -->
 | Skill | Type | What it does |
 |---|---|---|
+| [`project-timeline`](skills/project-timeline/SKILL.md) | Original | Produce a visual timeline for a project, launch, or multi-phase initiative — Mermaid Gantt with critical path marked, reversibility noted on milestones (one-way vs |
 | [`launch-readiness`](agents/launch-readiness.md) (agent) | Original | Evaluate readiness across cross-functional teams before a launch — Product, Engineering, Legal/Privacy, Security, Operations, GTM, Support — and surface blockers,… |
 | [`/retro`](commands/retro.md) (command) | Original | Run a sprint or milestone retrospective — data first, then the team's read, then one to three owned actions — and file the durable lessons somewhere they'll be read again |
 | [`/sprint-kickoff`](commands/sprint-kickoff.md) (command) | Original | Run the sprint kickoff — real capacity, a readiness check on candidate stories, a commit-versus-stretch split, dependencies and risks named, and a one-sentence sprint… |
