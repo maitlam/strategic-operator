@@ -1,14 +1,14 @@
 # Strategic Operator
 
-Open-source Claude skills, subagents, and automations for Biz Ops, Strategy, Program Management, and Communications.
+A plugin marketplace of 125 Claude skills, subagents, and automations for Biz Ops, Strategy, Program Management, and Communications — 50 built from scratch, grounded in how this work actually gets done.
 
 [![Validate](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml/badge.svg)](https://github.com/maitlam/strategic-operator/actions/workflows/validate.yml)
 
-The best way I know to learn something is to build it. So as I dig into agentic Biz Ops and Program Management, that's exactly what I'm doing, one skill at a time.
+I spent years as a strategic operator — the person who sits between the exec team and the work, making sure decisions get made, programs land, and nothing important falls through the cracks. This repo captures that experience as an agentic system: skills that know the difference between a real decision and a meeting that should've been an email, agents that run portfolio reviews and competitive intel the way a seasoned chief of staff would, and automations for the rituals that keep a team in rhythm.
 
-Early on, I stumbled on two generous open-source collections: Anthropic's [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) and Amin Borghei's [Claude-Skills](https://github.com/borghei/Claude-Skills). Rather than start from a blank page, I used them as my baseline and my guide. From there, I'm applying my own knowledge and experience: tweaking skills to fit how strategic ops work actually gets done, and building new skills and agents where I see gaps.
+The foundation includes work from two excellent open-source collections — Anthropic's [knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) and Amin Borghei's [Claude-Skills](https://github.com/borghei/Claude-Skills). I built on top of that: designing the plugin architecture, writing the original skills and agents where I saw gaps, and shaping everything around how strategic ops work actually flows — from intake to decision to delivery.
 
-This repo is part learning project, part working Strategic Ops toolkit, and part reference architecture for anyone curious about agentic workflows. If you're a chief of staff or strategic generalist exploring how AI agents fit into your workflow, clone this and experiment. If you're building your own skill system, steal whatever's useful.
+Whether you're in ops, strategy, program management, or just curious about agentic workflows — feel free to explore, fork, or borrow what's useful. I'd welcome feedback, ideas, or contributions if anything here sparks something for you.
 
 ---
 
@@ -27,6 +27,7 @@ claude plugin install discovery@strategic-operator
 claude plugin install positioning@strategic-operator
 claude plugin install product-planning@strategic-operator
 claude plugin install communications@strategic-operator
+claude plugin install operator@strategic-operator
 ```
 
 **Claude Cowork.** Add `maitlam/strategic-operator` as a marketplace from the plugins directory.
@@ -97,7 +98,7 @@ A user request usually enters via **description matching a skill** or **describi
 
 ```
 strategic-operator/
-├── .claude-plugin/marketplace.json   # the marketplace: lists the nine plugins
+├── .claude-plugin/marketplace.json   # the marketplace: lists the ten plugins
 ├── plugins/
 │   ├── bizops/                       # each plugin has the same shape:
 │   ├── programs/                     #   .claude-plugin/plugin.json  manifest
@@ -202,7 +203,7 @@ Everything above is auto-generated from each item's frontmatter by `scripts/cata
 
 ## Subagents
 
-Ten agents wrap the multi-step workflows and personas. Skills are what agents call.
+Eleven agents wrap the multi-step workflows and personas. Skills are what agents call.
 
 | Agent | Plugin | Wraps | Job |
 |---|---|---|---|
@@ -212,6 +213,7 @@ Ten agents wrap the multi-step workflows and personas. Skills are what agents ca
 | [product-discovery-researcher](plugins/discovery/agents/product-discovery-researcher.md) | discovery | customer-interview-script, interview-synthesis, jtbd-workshop, brainstorm-ideas | Customer-side research cycle — behavior over opinion, jobs not personas |
 | [operating-model-designer](plugins/operating-model/agents/operating-model-designer.md) | operating-model | operating-model-builder, decision-rights, governance-design, okr-tracking | Zero-to-one team design; anti-ceremony, authority explicit |
 | [decision-memo](plugins/operating-model/agents/decision-memo.md) | operating-model | decision-rights + novel content | Options-first decision packets; reversibility framing (T1/T2 doors) |
+| [red-team-critic](plugins/operator/agents/red-team-critic.md) | operator | stakeholder-profile, decision-log | Stress-test an artifact before it ships — argue the counter-case, surface hidden assumptions, name who will push back |
 | [portfolio-manager](plugins/portfolio/agents/portfolio-manager.md) | portfolio | portfolio-health, resource-allocation, dependency-map, risk-assessment | Active-work tracking; kill discipline, no watermelon status |
 | [portfolio-prioritizer](plugins/portfolio/agents/portfolio-prioritizer.md) | portfolio | portfolio-intake, opportunity-scoring | Pipeline scoring; criteria declared before scoring, invest/pause/kill/investigate |
 | [launch-readiness](plugins/programs/agents/launch-readiness.md) | programs | launch-playbook, dependency-map, risk-assessment, pre-mortem | Cross-team readiness sweep with a defensible GO / CONDITIONAL GO / NO-GO |
@@ -238,6 +240,10 @@ Deterministic — same input, same execution, every time.
 | [`/bizops:meeting-prep`](plugins/bizops/commands/meeting-prep.md) | bizops | Meeting prep — purpose and decision sought, open items from last time, the room, questions, time-boxed agenda; or a recommendation to cancel |
 | [`/discovery:feedback-weekly`](plugins/discovery/commands/feedback-weekly.md) | discovery | Weekly customer-feedback digest — triage, independent-source counts per theme, trend vs last week, routing to roadmap / bug / research |
 | [`/communications:deck`](plugins/communications/commands/deck.md) | communications | Build and render a deck from an existing artifact for a named audience — exec, internal, external, or board — with Marp or Slidev |
+| [`/operator:monday-packet`](plugins/operator/commands/monday-packet.md) | operator | Monday morning packet — the three things that matter this week, high-stakes meetings, pending decisions, at-risk items |
+| [`/operator:friday-wrap`](plugins/operator/commands/friday-wrap.md) | operator | Close the week — 3 wins, 3 misses, 3 to watch, plus a decision log of what got decided and what shipped |
+| [`/operator:one-on-one-prep`](plugins/operator/commands/one-on-one-prep.md) | operator | 1:1 prep — stakeholder profile, open asks in both directions, things to raise with anticipated pushback |
+| [`/operator:setup-scheduling`](plugins/operator/commands/setup-scheduling.md) | operator | One-time wizard to set up scheduled Monday-packet and Friday-wrap rituals |
 
 ### Hooks
 
@@ -272,7 +278,7 @@ Paths are conventions with env-var overrides — `SO_NOTES_DIR` (`meetings/`), `
 
 ### MCP servers
 
-Not yet configured. Some of the borrowed skills gesture at MCP integrations in their CONNECTORS.md — Slack, Notion, Jira, Confluence, Linear — but I haven't installed and documented these yet. That's the next automation layer.
+Several skills reference MCP integrations in their `CONNECTORS.md` — Slack, Notion, Jira, Confluence, Linear. These are on the roadmap as the next automation layer. For now, every skill works with pasted context or inbox files.
 
 ---
 
